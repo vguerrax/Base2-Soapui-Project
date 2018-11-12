@@ -593,6 +593,12 @@
           <con:params/>
           <con:element xmlns:cli="https://base2-soapui.firebaseio.com/clientes.json">cli:Response</con:element>
         </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element xmlns:cli="https://base2-soapui.firebaseio.com/clientes.json">cli:Fault</con:element>
+        </con:representation>
         <con:request name="GET-LimitToLast" id="eb7d440b-e021-45b5-8402-9b7c11bce206" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7328,7 +7334,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
           <con:properties>
             <con:property>
               <con:name>token</con:name>
-              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQxOTg1OTIwLCJ1c2VyX2lkIjoibDQ1VHp6bEREdVk2OTVzQlFmN1JGaXlhaWwzMyIsInN1YiI6Imw0NVR6emxERHVZNjk1c0JRZjdSRml5YWlsMzMiLCJpYXQiOjE1NDE5ODU5MjAsImV4cCI6MTU0MTk4OTUyMCwiZW1haWwiOiJhZG1pbkB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWRtaW5AdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.jQ2C68epDGluyx_pXiSdP3ohoa42sNrVwCc-MRGd-rW3dm8_2X5_UjQWyRm8ZCKqfHV_MkUkiDBm103mni1xVbK8puoIzdawmcRNyJKLCVs2JCkbgcr75sT25lCPL9CFarxQR5xzaI3SdVMCHFZWlno0I722yCqrTNN7DEYA0AI_-MIadTRjBIQOK6WFoek8trdGZx2mlolZrU7Q71AVFygA4k8S05Wt6d-13dlUl3upWSruqS5A1F2HhF9u9QbJ7wDe-PvGyotPzHlOPELl1MlWU9lXtInqxrzYKMr4r28TkEa8OiZOXNBgPxTBRisqa_1GOgQ7Q4ikzqQykLhkDA</con:value>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQyNTE1LCJ1c2VyX2lkIjoibDQ1VHp6bEREdVk2OTVzQlFmN1JGaXlhaWwzMyIsInN1YiI6Imw0NVR6emxERHVZNjk1c0JRZjdSRml5YWlsMzMiLCJpYXQiOjE1NDIwNDI1MTUsImV4cCI6MTU0MjA0NjExNSwiZW1haWwiOiJhZG1pbkB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWRtaW5AdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.K1d-pnTXpQ6FK96vIV6nPZRskkPAXyLYGDr-EHToKApL4RWNQ30atVgxeAecmXCEu_6eK8Zr7gUtQYQPTHpny8jxuiCQkludaahy5ZhaGpDxvzd7_l8zI2KrX_F-twcPS2qqtO1ho3hJBM3vnna4DO5dLmKlJSd3MCvvTJN6o_AocF6k145RBVkUjDUZBW6XCLsPSCaO99oGFPR81EGb4SmF7hHlafuiR0zoIRzLzkW39yStq9kEDipgj8kjdi8hJruaWjfA9Y8Ume0BMl656TJy6qtlGtiqQLS9jTBtzbk2VDCtZBYSnctRht2xlSaFdbKatt9gWChEtRya41Nlhg</con:value>
             </con:property>
           </con:properties>
         </con:config>
@@ -7557,7 +7563,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
           <con:properties>
             <con:property>
               <con:name>token</con:name>
-              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQxOTg1NTQ5LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDE5ODU1NDksImV4cCI6MTU0MTk4OTE0OSwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Bg5sNSEfn_G2Scvi9CdXuiE1tpXYsFbKNdpTcELf1MaX8PQqvbEAU4UVRspf-eHZXxg44bPP75NatL6BXdJjdlNFxLGnrU1Fq1bp5jZduA1JtGo97YkL-sOs4VaTOG786Dh4rqpvhmdoy4cQAa_mIwAiptIQB_vFCjM-SUbouOS_vPuFNuGFKB-aDxVL6TpsfBhF07m7eoLxWoAax4mRQkCRMybkl6AWZy5mHbIGdQxMl_ULN3VjI2z5ZMtWGnvLm2zCEvCFV0QixkusERG6sqHeJgCr9f5z4XlU_rzyX2Ee3XylZBM_H9GNPFyHPsgko7HRjwa2SY2jelvyHMfJlQ</con:value>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwMTU0LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDAxNTQsImV4cCI6MTU0MjA0Mzc1NCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Bn8s8qEEsoh8rPEaK7eJ7JfdAhTvV_V7_KD0C9K6HhEjhhuPFLhHdcfihRF6DXtEq6RtOOKsOvb4XQRyyK_-9dUAPGprOzxLDS2dWBY8ruIJHhjyv21NNiBXf779XVdVo_sIKPWAOgZx5-w0gfqqMwkQF5rVREVpl5dn-Lz2fbV4XE_EB-a-n3TBdT38QBHJYWvw1IinSPyi6h5FAaesmscsgr2ksSzLqMZqdA4Go45L2LMz_kA9T8Qk3q68ALF-VvupRqiaLpuJg-5dSCafpaw7zHPgliVW3Fh09SdZUK9OecwUDG_CHkGXJCJI0zPYeKRXhN-jLczGWMjSqEZIBA</con:value>
             </con:property>
           </con:properties>
         </con:config>
@@ -7705,22 +7711,1898 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
+    <con:testCase id="8dd85ee5-da88-4b87-a567-f95f4a1f2f36" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - orderBy" searchProperties="true" timeout="0">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="8dc0ef02-0c5e-48c5-a7bd-ae7a3790a0eb">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNDAyLCJ1c2VyX2lkIjoicXZZY0JVdVdwUGZNZXJpM3hiYnZTeE9tMDVEMyIsInN1YiI6InF2WWNCVXVXcFBmTWVyaTN4YmJ2U3hPbTA1RDMiLCJpYXQiOjE1NDIwNDA0MDIsImV4cCI6MTU0MjA0NDAwMiwiZW1haWwiOiJmaW5hbmNlaXJvQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmaW5hbmNlaXJvQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.pmOdNgTUe_kH528CFJdNq3oSeEY0hJ3UMcwuKfDGBxVJf3k6ksWkAwoKl29Up0YXSBxl_kApVoHSL4xeeWb_Eau0pwN1MKGc6xO_nCh6vGKbl-c0HkRSLn8mf96YEJa5iXWK1bUyEYHZl6RlD6PGhXMFYEeWyAEy4j6umq4WNLnnhNcHRyi7QrwJkDWOhyHdGbobEu5q3n2crjI_qF4z9mgPh7JBzAqg-fbNMvCnQXWNsSQcA0fRTztZc1viobmuFjrWOxbP7XjspJYNb4BONvFTBdb-IQXy_n0nx84C-Gzx4dKm34EXvlHDcShasEh_o7lJhZ2iyvOYd1hrLgRWlQ</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="fa997c59-3b68-41b1-b828-1a1eb5e34d8b">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="87c81794-267b-4ec7-b8af-840698109192" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="ce73b5c9-fc4f-4c2d-ad82-ccaf85b52e76" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.idToken</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="62f4e69f-a69d-4036-bfb3-15f44dd4781e">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="aae4da2e-5849-4dd7-993c-0c0a294cedc2">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Vendas Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://accounts.google.com/ServiceLogin</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e7c2514f-8f6d-4bc2-8b31-598ab9f8d143" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="9a91b296-9b3c-4732-ba7f-8ce80b6914f6" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda01":{"cliente":"cliente01","desconto":0,"produtos":{"produto01":true,"produto02":true},"total":56.89},"venda02":{"cliente":"cliente02","desconto":10,"produtos":{"produto07":true},"total":899.91},"venda03":{"cliente":"cliente04","desconto":0,"produtos":{"produto09":true,"produto10":true},"total":39.94},"venda04":{"cliente":"cliente07","desconto":5,"produtos":{"produto06":true},"total":75.52},"venda05":{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="auth" value="${token}"/>
+              <con:entry key="orderBy" value="&quot;$key&quot;"/>
+              <con:entry key="endAt" value="${Clientes startAt endAt#endAt}"/>
+              <con:entry key="startAt" value="${Clientes startAt endAt#startAt}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>f9e34bd4-6103-4d07-9d36-4f5b72ac864f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c9a3b588-23cf-4d52-a5ef-7b1571d4f4c6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="d345e55a-036e-4baa-a72b-3227c1976134" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - startAt e endAt" searchProperties="true" timeout="0">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="7770f3ba-b698-4787-b46f-62a179ef2fb5">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNTI1LCJ1c2VyX2lkIjoicXZZY0JVdVdwUGZNZXJpM3hiYnZTeE9tMDVEMyIsInN1YiI6InF2WWNCVXVXcFBmTWVyaTN4YmJ2U3hPbTA1RDMiLCJpYXQiOjE1NDIwNDA1MjUsImV4cCI6MTU0MjA0NDEyNSwiZW1haWwiOiJmaW5hbmNlaXJvQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmaW5hbmNlaXJvQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.mzAGjSQ_rmTXUXISn0yzm_m6lCPl5F66wYCAFeA_0rYHPZhhyJ_UvBmvZoUMeBDHjDXM06wiTPwyACB3dnXhailvdtHmdKeH6DhI2mw4kqttBP1Y-BrlFBCAoOO4G1GaSEesn4oBw2q9Zb025Ssu7SH3xU-Q_zKL_Jg7IoEBXbPu3HS1f825G2n7uqWfAWARUtaIrmlaiPeYyGCpQpDoZjpEykvvMHs-DfLrhIo_o9FOC4TD_ubYoF_1GMqQLwoOyVev_lAnXmo_Sy7Lujcfp3e6qd2iX5KNQruZViKpjhkxhd8uBDLeNeeuIS90NVZceF7clq7PjzWsgFycVg3cEA</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Vendas startAt endAt" id="b7e64bf7-ee93-4397-93e9-d563f19ecbe1">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${#TestSuite#dataSourcepath}</file>
+              <worksheet>Vendas startAt endAt</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>orderBy</con:property>
+          <con:property>startAt</con:property>
+          <con:property>endAt</con:property>
+          <con:property>resultado</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="99fe857e-3b70-4183-99f1-b0720c2bb80a">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="87c81794-267b-4ec7-b8af-840698109192" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="ba53a76e-dbf8-4b33-b696-3280b0ad177c">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="afdc6455-3294-485f-9fca-e61d4acdb9a6">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://accounts.google.com/ServiceLogin</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e7c2514f-8f6d-4bc2-8b31-598ab9f8d143" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="9a91b296-9b3c-4732-ba7f-8ce80b6914f6" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>${Vendas startAt endAt#resultado}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="auth" value="${token}"/>
+              <con:entry key="orderBy" value="${Vendas startAt endAt#orderBy}"/>
+              <con:entry key="endAt" value="${Vendas startAt endAt#endAt}"/>
+              <con:entry key="startAt" value="${Vendas startAt endAt#startAt}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="d91b5f44-0b85-4962-bba0-97934bf09819">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Vendas startAt endAt</dataSourceStep>
+          <targetStep>Obter Token de Autorização</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>f9e34bd4-6103-4d07-9d36-4f5b72ac864f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c9a3b588-23cf-4d52-a5ef-7b1571d4f4c6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="ec8299e4-a44d-4e09-ade6-7287dc9bb41d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - equalTo" searchProperties="true" timeout="0">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="1aa23442-b033-4503-8f4e-f9883b72ea1a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNTcyLCJ1c2VyX2lkIjoicXZZY0JVdVdwUGZNZXJpM3hiYnZTeE9tMDVEMyIsInN1YiI6InF2WWNCVXVXcFBmTWVyaTN4YmJ2U3hPbTA1RDMiLCJpYXQiOjE1NDIwNDA1NzIsImV4cCI6MTU0MjA0NDE3MiwiZW1haWwiOiJmaW5hbmNlaXJvQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmaW5hbmNlaXJvQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.G0D4DYMQv0KFdVLmtq032lZYTBW2G8-kL7FlR4Chb70OmCnQz6Eh53_iT_c5hBKuWxcEFLST58wZklvL9r2edNs9VcR1Af2J96MQuxrjQMx5By25bX2wioCxXYB7HxK0ScLwY60btY2kqK83Z_WYPMJ5AhJIKHvGWnObYO-Hjwp1yXyUAWZiPB-374g6rgaPmEt4g6__8iO64KNVt3oDn1b86p6v1YhWpUZnljY-zw9JPMdtSTK1znvbXuf4_wZ7jy1gIf-O7WgcvC7O7SJBpoVqA8KTyAJ8kiWOqtDYCsz_Tukeqd-JlgRQioP3gfJhgcahRZkV4FnYnEA815nwrQ</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Vendas equalTo" id="df546fa3-1d65-4431-a19c-4e63fe2b09c7">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${#TestSuite#dataSourcePath}</file>
+              <worksheet>Vendas equalTo</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>orderBy</con:property>
+          <con:property>equalTo</con:property>
+          <con:property>resultado</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="340c52fd-1311-4a9c-81ae-3b07e69a098b">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="87c81794-267b-4ec7-b8af-840698109192" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="626322f5-ff45-46d6-8e75-2e2dc1d12854">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="e57c0ad9-cab4-4a62-aed9-7f59f7e566e9">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://accounts.google.com/ServiceLogin</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e7c2514f-8f6d-4bc2-8b31-598ab9f8d143" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="9a91b296-9b3c-4732-ba7f-8ce80b6914f6" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>${Vendas equalTo#resultado}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="auth" value="${token}"/>
+              <con:entry key="equalTo" value="${Vendas equalTo#equalTo}"/>
+              <con:entry key="orderBy" value="${Vendas equalTo#orderBy}"/>
+              <con:entry key="endAt" value="${DataSource#endAt}"/>
+              <con:entry key="startAt" value="${DataSource#startAt}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="2f5aa89e-5b80-472b-b65e-48db1eea3d40">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Vendas equalTo</dataSourceStep>
+          <targetStep>Obter Token de Autorização</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>f9e34bd4-6103-4d07-9d36-4f5b72ac864f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c9a3b588-23cf-4d52-a5ef-7b1571d4f4c6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="4ad39ee0-fdcf-4617-a42c-701d81edd34f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToFirst" searchProperties="true" timeout="0">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="a19c1f17-1b88-45cd-bf41-23cbc022e0d2">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNjY0LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDA2NjQsImV4cCI6MTU0MjA0NDI2NCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.MuKw4fAFIl2ypDrK5IURx3a6cA2NXqRVs-q_ENuT1vO3z4A7Fflatno66OptQxjc9wSDNf8unrAwSBAfEOd74GYh6LocpwqRXOR7vm5cUhfIwY7_mjTdBMx91YnVaIZk3IrLYV6GhIvQmcguGSW_8EfzsHEEAH1eO8Zr4V1krmI0p17MTrHlwZuy0IHcMovW4AwKh7GZ8OlkT-dexs0594WKMLh22XI71Y-Z6YE_7VlGjWzC2YFNPabmUU4S9D1vpvdbt5WlsdwWm5JMiwbcCeyjoFjKHcw21LrFJApLWYu1FTEYnRFt4SdJQJVt5zGpSS1brfqinFnhVSnv-UFkow</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="27479664-0661-47a7-b524-28403d8e5421">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e880c245-b248-4d5c-8355-8885498b56b0" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Grava Token" id="0c7d51ec-4a97-49b2-bc7b-60a9fc7d8ef4">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="9d98a311-eb8a-4f59-a41a-68ee2e96d10d">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Vendas Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="485c4a96-2105-4cf4-b0e9-1ff56a414664" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="e7b3054f-257b-4192-aa38-b862a2329958" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda01":{"cliente":"cliente01","desconto":0,"produtos":{"produto01":true,"produto02":true},"total":56.89},"venda02":{"cliente":"cliente02","desconto":10,"produtos":{"produto07":true},"total":899.91},"venda03":{"cliente":"cliente04","desconto":0,"produtos":{"produto09":true,"produto10":true},"total":39.94}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="auth" value="${token}"/>
+              <con:entry key="limitToFirst" value="3"/>
+              <con:entry key="orderBy" value="&quot;$key&quot;"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+              <con:entry>orderBy</con:entry>
+              <con:entry>limitToFirst</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5d659287-6744-4d7d-8b69-4a08c1668152</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="8ff5f89c-60ad-4580-a24b-a82dce7e2ccc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToLast" searchProperties="true" timeout="0">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="b5cc4ae7-3107-4626-9999-b5c551ee6a15">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNjk5LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDA2OTksImV4cCI6MTU0MjA0NDI5OSwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.IMBeMctwkEft3pgOQIn2fAoPM74A3MowlO2pGOx8YHzT_ETQiXN3koY3a23Cs6AbMpElmXQtExs-zCKjSvKSyCiG2Lr-3sPBBqTdOz0psm3_C6mKfNayE3qPHfi2b2qmuYLUmJE3VnWHm0iFht40QtrlgZ90sgy_IXWs9mX7oIxL10Sho-BFTuRZhLJgEXu_gIQ9VG_75NphmdfegsnvXa3b0M9gcGxNd8EvTOmCF-QzzUMApc7cLpfdlRcTlWKUg_stNJ39Jdv9nqCiMXYscfjT3EZLni0irM_W0-P6-b4a-8K6HVOgBwwaVy-FwJZGoY8FgK6G-rygn85kYL2Z2Q</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="2b20a93c-80c5-4889-830a-c59043947ac4">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="aebc1c9f-81b9-42a8-973c-b450700927e8" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Grava Token" id="9a882aae-3e9f-47e4-a1de-097ca5ee5702">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="757e7ad2-77d3-4ec4-89af-10fff167ed06">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Vendas Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="485c4a96-2105-4cf4-b0e9-1ff56a414664" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="e7b3054f-257b-4192-aa38-b862a2329958" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda03":{"cliente":"cliente04","desconto":0,"produtos":{"produto09":true,"produto10":true},"total":39.94},"venda04":{"cliente":"cliente07","desconto":5,"produtos":{"produto06":true},"total":75.52},"venda05":{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="auth" value="${token}"/>
+              <con:entry key="limitToFirst" value="5"/>
+              <con:entry key="orderBy" value="&quot;$key&quot;"/>
+              <con:entry key="limitToLast" value="3"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+              <con:entry>orderBy</con:entry>
+              <con:entry>limitToFirst</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5d659287-6744-4d7d-8b69-4a08c1668152</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="ba9032ef-365f-4dda-8972-355cef46bb33" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Consultar Venda" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="d07d73fd-bd6b-4b73-bb02-c778cc78145d">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwNzQ4LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDA3NDgsImV4cCI6MTU0MjA0NDM0OCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Tm2tnjWFhR7ho7P9HFHzw76w6JyMvriUZiF8wg5IZutUfENthOfwjUi7Pv33j1QFd-I7XfsdtTps6oA3oeumAY5ND1u8dztLXCHnU1ef2FfKVHlJ0htXEG9O5kKn2KMY9EyAHvx7CCOiSByl-P41AdGz8SB3xVQxZc16OOMOn57UJ249hzPUpJT_duS0ZasjnULOYw_afuhIWLdCDiFoXw_PB-pivIkCk9ce-jVdX2jEar3yLS2Q65FHTGSMnGQKTLBHScpQwphYH0GHtNyk8TzfGNVu6_CGab15axXpN6zl05cgT10RZ8oF9wsLqN0tikQmhCe6rCK9o2cE9J_7kw</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="fa301148-2fab-45ce-80fa-b38710fb9f0a">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="eaa11735-aba1-4ac8-a7c7-6c52d93e6b67" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="2f9d4b62-5418-42d2-b2b7-347684b949f2">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Consultar Venda" id="81dd1706-0a1d-4887-9958-cbe974b332b9">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Consultar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas/venda05.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fc4985b-983a-449b-823f-6ab85e23e897" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="501478bd-4fa8-4cb9-a4d4-bab9c8c4fe62" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="cfef7913-872c-4c46-ade6-d5a6674bbeaa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Deletar Venda" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="bbe87c72-e003-444c-894a-f1d80b1d6128">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwODE2LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDA4MTYsImV4cCI6MTU0MjA0NDQxNiwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.IhRnNYWq1aEMKOViDIwVpL4m8SvDGhOL3_dfYaE5HPYSY58co_M6QT9L1XVC2DKH0PILUrdReyZvqIxGGWcS8brChC51rp0S8V6U5GIz4c9SElEx4cOB2K-TeuavvBOgNwbJgnScxb1bS-BvwOXms5vTK2HAHLUYzzeqY6l2kgXX4QdOmJx-Aq33gjByLhbIf9b2nm1D5VHcodvjLn_WeIjk6CA0TiTQMcU0ef5mHV3z9bVduGI3ZZTbK7NYoDhyU9tpkIKYXd9du74GJo-Ct9dvOH3ffF8-KRBS6az5ArSBLOU1G233F3LFTGkm4LVH6GKVRNXGwK_2j0E64AhWsw</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="039581be-445e-4c85-ac41-44d16970768f">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="eaa11735-aba1-4ac8-a7c7-6c52d93e6b67" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="fc7b6480-be5b-448b-8186-bea5f35095a2">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Deletar Venda" id="14ff9ce3-f1d7-4536-8da8-dc299e7532b1">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Deletar Venda" id="2fa53e89-d5dc-4cd0-9143-9d203131b8bf" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas/venda03.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes/-LLKnOMLdAWSwIK8M7og.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="3471b605-7540-4f7c-8b27-b249eb739fcc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="auth" value="${token}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Venda" id="20dc09e4-12e8-4dd5-9d98-555a6fd858f2">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fc4985b-983a-449b-823f-6ab85e23e897" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="501478bd-4fa8-4cb9-a4d4-bab9c8c4fe62" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda01":{"cliente":"cliente01","desconto":0,"produtos":{"produto01":true,"produto02":true},"total":56.89},"venda02":{"cliente":"cliente02","desconto":10,"produtos":{"produto07":true},"total":899.91},"venda04":{"cliente":"cliente07","desconto":5,"produtos":{"produto06":true},"total":75.52},"venda05":{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="f04c189e-1f1d-4b7f-8f22-f1e876097368" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Incluir Lista de Vendas - Acrescentar a Atual" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="263a8a66-3442-4922-a3de-8b9c1409303f">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQwODUwLCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDA4NTAsImV4cCI6MTU0MjA0NDQ1MCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bsaT0Yoxob2GiQdPUi-iZ6n4v3RF_QTAdANaxhhVhey6EdUCuNUL5bAnHxNsdx-6yCky-7MyhmPonfL93ZR4OKwCsOTEm1xvLDWmnnhARjbp7tUmAd4BYBeEhbctyTOFVJRF9kI5kMq-dY6pYQzGWC9LQVGdNoObJp3zZlAFMMSp-ua24cLFJ0am2j_7-scCS3mLvEt52nRABhm6M-94o1I1njULnu2P4Q-6GasFE3ZUrN11tNWfVPlowV3htsj1uA5awuYmunl3HN7-Pi56n_mJH_pDEC5WYV-WoZ77wOtBg87zOIf7fPkA1v5L5RTeLZpAJ3jar9ouLHErvTR7EQ</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="b9a0d9dc-9321-4535-a6d6-ca6d0714793d">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1fe78e3a-404d-4a39-888b-4a01a329f68c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="b90f857f-a315-4499-8065-2319a7771734">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Incluir Lista de Vendas" id="47ee9488-b2f7-40cb-922d-60f538acc1c8">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Incluir Lista de Vendas" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request>{
+	"venda06": {
+		"cliente": "cliente05",
+		"desconto": 0,
+		"total": 0,
+		"produtos": {
+			"produto03" : true
+		}
+	},
+	"venda07": {
+		"cliente": "cliente06",
+		"desconto": 0,
+		"total": 0,
+		"produtos": {
+			"produto05" : true
+		}
+	}
+}</con:request>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e83c37f5-c175-4d82-ba0a-0f3f6fb1ae31" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="16b34cbc-e7a5-4bd4-9ed1-9176a6811607" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda06":{"cliente":"cliente05","desconto":0,"produtos":{"produto03":true},"total":0},"venda07":{"cliente":"cliente06","desconto":0,"produtos":{"produto05":true},"total":0}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value=""/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Vendas" id="13e4fb34-3919-4f44-9f45-a73b0942e5c2">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fc4985b-983a-449b-823f-6ab85e23e897" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="501478bd-4fa8-4cb9-a4d4-bab9c8c4fe62" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda01":{"cliente":"cliente01","desconto":0,"produtos":{"produto01":true,"produto02":true},"total":56.89},"venda02":{"cliente":"cliente02","desconto":10,"produtos":{"produto07":true},"total":899.91},"venda03":{"cliente":"cliente04","desconto":0,"produtos":{"produto09":true,"produto10":true},"total":39.94},"venda04":{"cliente":"cliente07","desconto":5,"produtos":{"produto06":true},"total":75.52},"venda05":{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48},"venda06":{"cliente":"cliente05","desconto":0,"produtos":{"produto03":true},"total":0},"venda07":{"cliente":"cliente06","desconto":0,"produtos":{"produto05":true},"total":0}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="2d415ae8-1ef0-4d64-96b7-b352a0ecf2aa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Incluir Lista de Vendas - Substituir a Atual" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="1d5466f2-1e47-47be-bd1b-97eaf29ec7f4">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQxMzQ1LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDEzNDUsImV4cCI6MTU0MjA0NDk0NSwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Rw08u2C_P9oCLcntwx_619PPnz0wOSDV2sOcaK2GaVzZ6vHf4tag5wZmbp7Tqvt3HioFxlZ4wr0-aliCPYyqOM0ZKrvWkfU6gmRSVGkgQcP5Brx61AS0uxnCSuWSIfkmx9ezQw6mkPyzeQIwhXYW6FI3afva2izx48QE5A8z0ZUoO6q6TkW6vzy3b-C1xrn7uOk1Vck9MdENKZXOoD6KzGdbY3MSnb1dZLbwxoC3AN-RrVpuoMynI__wn3x21SfcYmmgcW7f4PFF15SS8MuTp5RuvXot1TyHAYAj1VtO50828GV-5YsAAR_5YiLIg4a2NfQlB1GZlzWa8gVDIFfR3A</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="ca42a4b2-d1a8-4069-ae45-571b1be39f7e">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1fe78e3a-404d-4a39-888b-4a01a329f68c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="cfb384da-5055-4943-b7bf-ca846a2b7a95">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Incluir Lista de Vendas" id="e2b5effb-9d9e-4452-81f5-c74566b4da8a">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Incluir Lista de Vendas" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request>{
+	"venda06": {
+		"cliente": "cliente05",
+		"desconto": 0,
+		"total": 0,
+		"produtos": {
+			"produto03" : true
+		}
+	},
+	"venda07": {
+		"cliente": "cliente06",
+		"desconto": 0,
+		"total": 0,
+		"produtos": {
+			"produto05" : true
+		}
+	}
+}</con:request>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e83c37f5-c175-4d82-ba0a-0f3f6fb1ae31" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="16b34cbc-e7a5-4bd4-9ed1-9176a6811607" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda06":{"cliente":"cliente05","desconto":0,"produtos":{"produto03":true},"total":0},"venda07":{"cliente":"cliente06","desconto":0,"produtos":{"produto05":true},"total":0}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value=""/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Listar Vendas" id="17c61fb3-f028-48cf-8f8c-862da1881c94">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Listar Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fc4985b-983a-449b-823f-6ab85e23e897" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="501478bd-4fa8-4cb9-a4d4-bab9c8c4fe62" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"venda06":{"cliente":"cliente05","desconto":0,"produtos":{"produto03":true},"total":0},"venda07":{"cliente":"cliente06","desconto":0,"produtos":{"produto05":true},"total":0}}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="cfc82d16-35dc-4e81-8277-80d16985406d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Incluir Venda" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="2e7a399a-ff9a-42a7-a719-e2b2ca40be70">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQxNTgzLCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDE1ODMsImV4cCI6MTU0MjA0NTE4MywiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.TQm2ZC7nivM50Dp9s4h0MGSmQKvbokEUNH-QfjmgTdnbitXgrOzcHvg_tXfclF_s2WUcjeJ38-KBxoJwo_Xd23mWD3RvKS-krzeJmsfyObMAH6rLHEMVa_tWL26Km9eIrVkaYicBlEB_SVstPPIc0cxhToNh1Je9pmpXS_0M9vQcZY04_A-5z-oea3nYoJK_nnipXplOD0NU3EaxOMeJecku7tcLgawVM69IkvfCV4bP6kdCQYS0ZdlA4XWfBRFAZBmp4cVMiMG6s_q5wJTVLfUpdEeF9GbM_seAF1AuuIs4PzY-ea_fh086s8JV_Z3nzpS_E4tlLrptGK_AkMVv-g</con:value>
+            </con:property>
+            <con:property>
+              <con:name>idVenda</con:name>
+              <con:value/>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="1549be0d-177d-497c-b873-3f830b9310cb">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1fe78e3a-404d-4a39-888b-4a01a329f68c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="ec2c074d-cc16-4408-8e02-2abd84b938a9">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Incluir Venda" id="f9c2fc00-7217-489d-b368-317d547a2303">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Incluir Venda" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request>{
+	"cliente": "cliente05",
+	"desconto": 0,
+	"total": 0,
+	"produtos": {
+		"produto03" : true
+	}
+}</con:request>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e83c37f5-c175-4d82-ba0a-0f3f6fb1ae31" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value=""/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Id da Venda" id="27fa5df2-9707-46c9-a7b9-f7c78b63add4">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>idVenda</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Incluir Venda</con:sourceStep>
+            <con:sourcePath>$.name</con:sourcePath>
+            <con:targetType>idVenda</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Consultar Venda" id="ba4ce519-2ccb-4e05-85d9-a01d3f149b15">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Consultar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas/${idVenda}.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2fc4985b-983a-449b-823f-6ab85e23e897" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="501478bd-4fa8-4cb9-a4d4-bab9c8c4fe62" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"cliente":"cliente05","desconto":0,"produtos":{"produto03":true},"total":0}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript/>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>27fa5df2-9707-46c9-a7b9-f7c78b63add4</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="13f9a25c-5259-4a7a-82ff-58aa04d7775e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Incluir Venda - Validação de Regras" searchProperties="true">
+      <con:description/>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="a71b4e97-5881-458d-b275-ea3d748c34d5">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQyNTIzLCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDIwNDI1MjMsImV4cCI6MTU0MjA0NjEyMywiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.hsu6um7gvlrWRbLRy3PUr5iBEXeFA_YaYhHKS78uBRVkjbZeBnUpr5NKj57dgeaZag5Ho2bFAT2nZi9OvIZVP2c0kbcmxZokbhRmYwOzPrUEjliN3Cg9aHabUyYl09iGyd6ZBh_QtrDKwT33Zp2JNB7DPlUt7w8UqlnN3_8rKaMlERTJF3TOEKl9vEZVzrHSE6SE0r3Xvv6Dsy-SU366GY4fXgjeBRpJ3B4SYS28kTmwy1qpBlsw-TOcpGXGwyGDulMi574RW6ppB2zrOiyQBaSZKFGnokibpcglab5f7c1OTcLixmGi-6V2ABvHBkNZ_jL_cfJs-vksVjWHQjtHLw</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Vendas" id="2cb84be3-fbae-47d3-9f8f-8b3fb86d8bdf">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${#TestSuite#dataSourcePath}</file>
+              <worksheet>Vendas</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>vendaJson</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="56664085-f444-4ecf-865b-8d47cf682fb8">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "vendedor@teste.com",
+	password : "vendedor123",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1fe78e3a-404d-4a39-888b-4a01a329f68c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="c8d76bc6-92e7-4d13-b35d-f489fd5dec00">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Incluir Venda" id="f0742655-63a7-49b6-8705-1898d0c86cd0">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Incluir Venda" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request>${Vendas#vendaJson}</con:request>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e83c37f5-c175-4d82-ba0a-0f3f6fb1ae31" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>401</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="526d9087-4e77-4a04-b399-4b60a0cd3a86" name="JsonPath Match">
+              <con:configuration>
+                <path>$</path>
+                <content>{"error":"Permission denied"}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value=""/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="3d72b7e3-8cf3-444c-8695-b963854b5d1d">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Vendas</dataSourceStep>
+          <targetStep>Obter Token de Autorização</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>testCase.testSuite.getTestCaseByName("Popular Clientes, Produtos e Vendas").run(new com.eviware.soapui.support.types.StringToObjectMap(), false);</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>27fa5df2-9707-46c9-a7b9-f7c78b63add4</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2cb84be3-fbae-47d3-9f8f-8b3fb86d8bdf</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="5b89974f-a8c7-4ed3-b292-3db07d0fcd13" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0">
+      <con:description>Testes de validação de acesso de leitura da base de fornecedores</con:description>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="0e00bba2-19d9-4a52-92dd-680273b88036">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQyNzI0LCJ1c2VyX2lkIjoicXZZY0JVdVdwUGZNZXJpM3hiYnZTeE9tMDVEMyIsInN1YiI6InF2WWNCVXVXcFBmTWVyaTN4YmJ2U3hPbTA1RDMiLCJpYXQiOjE1NDIwNDI3MjQsImV4cCI6MTU0MjA0NjMyNCwiZW1haWwiOiJmaW5hbmNlaXJvQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmaW5hbmNlaXJvQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.pe1bFjh6K4bW3fwDUragz_jMkWtdOkSkbLMXMkbWQXD9vpEDVpyHPXscDUZGD0ubVORQEWJjLoNPWF5CGEYRVg-m1QtRf_13SKbEO8kvXNtzzSCetMMVahHoWlsIa92gv6ex_aE4jwMOjTIGZIjfu8lrbgQ3dWiNoosNhs5ENknKISFX_npMU5KDeCkYjrWKIOGoyu0bHzXeB1jpdfAUP5nAGN_32ZeGKBHOue9aoGwx0d97y-2SNQyn9ewgw9jqTLo9gcJNUI3JYz71H-W3L3HMLV7oefBqX8QmkVGXFbHyIi2aFPGKUTs2mguI98VL-UcuNPvj20MmEq8Z211r3Q</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Vendas Validação de Leitura" id="db1a8336-3ff3-4c60-9e89-3d03209da96b">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${#TestSuite#dataSourcePath}</file>
+              <worksheet>Vendas Validação de Leitura</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>email</con:property>
+          <con:property>senha</con:property>
+          <con:property>codRetorno</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="71dacd4d-42db-4a30-9f87-e466a562b6b2">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "${Vendas Validação de Leitura#email}",
+	password : "${Vendas Validação de Leitura#senha}",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="44914eed-f448-493b-879e-d39186cb2349" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="76bdf890-1247-4b73-8ddd-41317ddff242">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Leitura de Vendas" id="aee94f53-fae2-4bf6-89bf-d15cbc088f95">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Leitura de Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://console.firebase.google.com/project/base2-soapui/database/data/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="48b82adf-33b6-4015-8c94-b64dbd119b60" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>${Vendas Validação de Leitura#codRetorno}</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value="pretty"/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="242eb84a-df0c-494b-a330-c02139682724">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Vendas Validação de Leitura</dataSourceStep>
+          <targetStep>Obter Token de Autorização</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>db519e6f-9d84-4113-a30d-ac63aeee780a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>64ba85b0-a3ad-4f20-9b5d-4d377b472da2</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a3f608c0-718e-4aba-9939-968d1533ebfc</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>83cfa7d3-04fd-4ff4-9f3c-e36bd9ad65eb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2429eb66-2a7b-476e-8717-da05c2b82ed2</con:testStepId>
+        <con:status>ENABLED</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>4aa4131c-443e-4eec-9887-7cef8491d8dc</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="34b4dd71-bc78-4e26-b590-8ca2abca891d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0">
+      <con:description>Testes de validação de acesso de gravação da base de fornecedores</con:description>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Propriedades" id="0ab0472a-f788-4a09-9056-def7a3512035">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>token</con:name>
+              <con:value>eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkZjY0MWJmNDY3MTA1YzMyYWRkMDI3MGIyZTEyZDJiZTJhYmNjY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQyMDQyNzMwLCJ1c2VyX2lkIjoicXZZY0JVdVdwUGZNZXJpM3hiYnZTeE9tMDVEMyIsInN1YiI6InF2WWNCVXVXcFBmTWVyaTN4YmJ2U3hPbTA1RDMiLCJpYXQiOjE1NDIwNDI3MzAsImV4cCI6MTU0MjA0NjMzMCwiZW1haWwiOiJmaW5hbmNlaXJvQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJmaW5hbmNlaXJvQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.JlhWvn6WIBGmEVVnM5mvXnGUHiU_Da4efIgQUDd42fo4Vz4oOgTO2V_xyqrvUl8rme04qpa-nMLx_ogLHAOOfkJBOn-i8CaCoN-3rnaszUWs9zw8VvwT0E9u4ghZ6ldUJV9IM_7NZcqkAZyktFRL43TeqHRZJc5TlU2Ar6IP_LwiUhKEfKox8Km9HYcg7DJgRFHHvu5FR35yZCvG_LhPWshNcxkDyXPZW6pjMh_elW1AW4MMq9qQpJONNc8uDEfNaUZXykYmqnJX-V-xaPlsYAD3PoBZz9L1L66W0vbvFM0iSyWYl9LE9smLFzjxEaYKwzCJzuo8tZgbBOsol8fPRQ</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Vendas Validação de Gravação" id="c4212906-6f24-4112-aab7-a1d3bf4202bd">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${#TestSuite#dataSourcePath}</file>
+              <worksheet>Vendas Validação de Gravação</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>email</con:property>
+          <con:property>senha</con:property>
+          <con:property>codRetorno</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Obter Token de Autorização" id="fe4d2bd7-8ea8-4bff-abb0-a346f672eace">
+        <con:settings/>
+        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:endpoint>
+            <con:request>{
+	email : "${Vendas Validação de Gravação#email}",
+	password : "${Vendas Validação de Gravação#senha}",
+	returnSecureToken : true
+}</con:request>
+            <con:originalUri>https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f4130fb5-d182-4818-b69b-a26a73730be5" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="key" value="AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>key</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Gravar Token" id="c94f3fb1-f320-4fc4-9317-4d5016d07bb5">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Obter Token de Autorização</con:sourceStep>
+            <con:sourcePath>$.idToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>Propriedades</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Gravação de Vendas" id="ea1b2ec0-fa1a-4002-aab4-3cb758753647">
+        <con:settings/>
+        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Gravação de Vendas" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://base2-soapui.firebaseio.com/vendas.json</con:endpoint>
+            <con:request>{
+	"cliente": "cliente05",
+	"desconto": 0,
+	"total": 0,
+	"produtos": {
+		"produto03" : true
+	}
+}</con:request>
+            <con:originalUri>https://base2-soapui.firebaseio.com/clientes.json</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="3914df24-7034-4344-a20d-e0232edfbe36" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>${Vendas Validação de Gravação#codRetorno}</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>vguerrax@gmail.com</con:username>
+              <con:password>viih1406</con:password>
+              <con:domain>base2-soapui.firebaseapp.com</con:domain>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="print" value=""/>
+              <con:entry key="auth" value="${token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>auth</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="7dfd37e8-d02d-4c1f-afd0-35e76ec586b7">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Fornecedores Validação de Gravação</dataSourceStep>
+          <targetStep>Obter Token de Autorização</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
     <con:properties>
       <con:property>
         <con:name>dataSourcePath</con:name>
-        <con:value>C:\Dev\Soap\Base2-Soapui-Project\Base2-SoapUi\DataSources\Vendas_DataSource.xlsx</con:value>
+        <con:value>F:\SoapUI\Projects\Base2-Soapui-Project\Base2-SoapUi\DataSources\Vendas_DataSource.xlsx</con:value>
       </con:property>
       <con:property>
         <con:name>clientesJsonPath</con:name>
-        <con:value>C:\Dev\Soap\Base2-Soapui-Project\Base2-SoapUi\DataSources\clientes.json</con:value>
+        <con:value>F:\SoapUI\Projects\Base2-Soapui-Project\Base2-SoapUi\DataSources\clientes.json</con:value>
       </con:property>
       <con:property>
         <con:name>produtosJsonPath</con:name>
-        <con:value>C:\Dev\Soap\Base2-Soapui-Project\Base2-SoapUi\DataSources\produtos.json</con:value>
+        <con:value>F:\SoapUI\Projects\Base2-Soapui-Project\Base2-SoapUi\DataSources\produtos.json</con:value>
       </con:property>
       <con:property>
         <con:name>vendasJsonPath</con:name>
-        <con:value>C:\Dev\Soap\Base2-Soapui-Project\Base2-SoapUi\DataSources\vendas.json</con:value>
+        <con:value>F:\SoapUI\Projects\Base2-Soapui-Project\Base2-SoapUi\DataSources\vendas.json</con:value>
       </con:property>
     </con:properties>
     <con:setupScript>import java.io.File;
