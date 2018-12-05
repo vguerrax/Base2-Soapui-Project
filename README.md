@@ -1,4 +1,4 @@
-# PROETO DE AUTOMAÇÃO - API REST
+# PROJETO DE AUTOMAÇÃO - API REST
 
 ## 1.	Introdução
 Este documento tem como objetivo apresentar o Projeto de Automação de API Rest com SoapUI, tratando a estrutura e composição do projeto, a API sob testes e seus endpoints.
