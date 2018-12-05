@@ -100,7 +100,7 @@ As requisições foram organizadas dentro de dois serviços, da seguinte forma:
 	* GET-LimitToLast – Definição de uma requisição GET com o parâmetro limitToLast;
 	* GET-OrderBy – Definição de uma requisição GET com o parâmetro orderBy;
 
-	* GoogleAPIs – contém a requisição de autenticação, uma requisição POST feita à URL https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword conforme citado anteriormente.
+* GoogleAPIs – contém a requisição de autenticação, uma requisição POST feita à URL https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword conforme citado anteriormente.
 
 
 ### Estrutura de Testes
