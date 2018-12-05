@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="316a23f9-fc8e-48df-80fc-c1e6186aae50" activeEnvironment="Default environment" name="Base2 SoapUi" resourceRoot="" defaultScriptLanguage="Groovy" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="2.5.0 2018-09-14T14:45:07Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="316a23f9-fc8e-48df-80fc-c1e6186aae50" activeEnvironment="Default" name="Base2 SoapUi" resourceRoot="" defaultScriptLanguage="Groovy" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="2.4.0 2018-06-08T12:50:23Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
@@ -69,7 +69,7 @@
   <con:entry key="Save Project" value="false"/>
 </xml-fragment>]]></con:setting>
   </con:settings>
-  <con:interface xsi:type="con:RestService" id="cb6e546d-ce93-430a-8465-23426da2afbc" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://base2-soapui.firebaseio.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:RestService" id="cb6e546d-ce93-430a-8465-23426da2afbc" wadlVersion="http://wadl.dev.java.net/2009/02" name="FirebaseEndPoints" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart=""/>
     <con:endpoints>
@@ -666,7 +666,7 @@
       </con:method>
     </con:resource>
   </con:interface>
-  <con:interface xsi:type="con:RestService" id="497a87df-7c47-4ec4-8305-bb9bd53b4e26" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://www.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:RestService" id="497a87df-7c47-4ec4-8305-bb9bd53b4e26" wadlVersion="http://wadl.dev.java.net/2009/02" name="Google APIs" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart=""/>
     <con:endpoints>
@@ -740,7 +740,7 @@
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="af0c4808-1063-4628-9395-f62ff94a9771" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Clientes" searchProperties="true" timeout="0" disabled="true">
+    <con:testCase id="af0c4808-1063-4628-9395-f62ff94a9771" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Clientes" searchProperties="true" timeout="0" disabled="true" maxResults="0">
       <con:description>Caso de teste para popular a base de dados de clientes</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -757,7 +757,7 @@
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="6f292c3c-77e4-4e45-ac35-43db3798e033">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="e975860c-6220-4038-bd02-547a20a35af2" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -816,13 +816,7 @@
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#jsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#jsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -833,7 +827,7 @@
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Clientes" id="96c8927f-5200-4259-8504-fb7b668da39d">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Clientes" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -883,7 +877,7 @@
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="9b265a16-e1e9-4632-8cc4-1054d6c2bb8f">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -942,7 +936,7 @@
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes" id="4cfaf623-f57f-4601-bdc9-e903b9d031ba">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1010,7 +1004,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="75b5cc05-37a2-4882-a5a1-002fbf909db9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - orderBy" searchProperties="true" timeout="0">
+    <con:testCase id="75b5cc05-37a2-4882-a5a1-002fbf909db9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - orderBy" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro orderBy para filtrar os clientes retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -1027,7 +1021,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="c2f81e4a-a7b8-401b-8871-7b513cef9119">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1087,7 +1081,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes Com Filtros" id="c5e9bd13-d821-4ced-98e5-9343cd283bab">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1142,7 +1136,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="782889d7-4ec1-4271-9a28-462dcb9758d2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - startAt e endAt" searchProperties="true" timeout="0">
+    <con:testCase id="782889d7-4ec1-4271-9a28-462dcb9758d2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - startAt e endAt" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes dos parâmetros startAt e endAt para filtrar os clientes retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -1161,13 +1155,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Clientes startAt endAt</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Clientes startAt endAt</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -1181,7 +1169,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="59763f08-ee10-43ac-ad5a-1fdc745a763c">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1241,7 +1229,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes Com Filtros" id="c9a3b588-23cf-4d52-a5ef-7b1571d4f4c6">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1304,7 +1292,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="0ac1a311-5968-41ea-bacb-bb11d4be8d16" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - equalTo" searchProperties="true" timeout="0">
+    <con:testCase id="0ac1a311-5968-41ea-bacb-bb11d4be8d16" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - equalTo" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro equalTo para filtrar os clientes retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -1323,13 +1311,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Clientes equalTo</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Clientes equalTo</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -1342,7 +1324,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="3166e743-3297-46f5-8ae5-f38cc73f5c9d">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1402,7 +1384,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes Com Filtros" id="e93b5973-2663-4269-b9c2-e85bb52221d8">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1466,7 +1448,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="48b66794-6e74-4176-8192-7a6c964b2378" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - limitToFirst" searchProperties="true" timeout="0">
+    <con:testCase id="48b66794-6e74-4176-8192-7a6c964b2378" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - limitToFirst" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToFirst para filtrar os clientes retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -1483,7 +1465,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="0a0d5256-78ef-4d36-85f5-88560f0d5950">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1540,7 +1522,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes Com Filtros" id="5d659287-6744-4d7d-8b69-4a08c1668152">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1590,7 +1572,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="0ceb124c-1742-4f25-89b7-2e02769745fe" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - limitToLast" searchProperties="true" timeout="0">
+    <con:testCase id="0ceb124c-1742-4f25-89b7-2e02769745fe" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Clientes - limitToLast" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToLast para filtrar os clientes retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -1607,7 +1589,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="ce21e21b-aa8c-46a0-b44c-96e62dd06db9">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1664,7 +1646,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes Com Filtros" id="6aee8793-2f7b-464c-a34d-79b86b6437d4">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1732,7 +1714,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="6362d3ed-da66-4f2e-84f7-d434aa720f6b">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1791,7 +1773,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Cliente" id="10b5b8f5-2c1f-4c28-abcd-e25d77588312">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Cliente" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1856,7 +1838,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="6517b4f9-0396-49e7-9ba9-f50eaa1e51f1">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1915,7 +1897,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Deletar Cliente" id="6c2786aa-0db9-4e4a-9d70-74e20543cbea">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Deletar Cliente" id="2fa53e89-d5dc-4cd0-9143-9d203131b8bf" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -1946,7 +1928,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes" id="3c687ea7-a3dc-4947-b537-97f27ebb10d1">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes" id="d35616d1-478c-4ea7-8768-167a35f16c53" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2001,7 +1983,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="6146d7be-40bb-433c-aede-058f369e9883">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2060,7 +2042,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Clientes" id="f71005e0-4f46-4e00-adb6-62b0ad383336">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Clientes" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2117,7 +2099,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes" id="6c2035aa-9970-465e-8efc-bff199846b9a">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2171,7 +2153,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="5a036301-69f9-40eb-860b-40ab1c168ffd">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2230,7 +2212,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Clientes" id="6ba49dd0-7f40-4494-8d9e-24341d6b04f6">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Clientes" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2287,7 +2269,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Clientes" id="735ccddb-673a-480d-b457-a2a731fd093c">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Clientes" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2345,7 +2327,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="ffd36062-32d9-4458-a3f6-c43d989e82bc">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2404,7 +2386,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Cliente" id="bf49b225-b18b-4e6a-978d-adbd6b697783">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Cliente" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2468,7 +2450,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Cliente" id="270484cf-d3ce-4c65-8504-d508249dd59f">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Cliente" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2528,13 +2510,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Clientes</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Clientes</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -2545,7 +2521,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="a6a5394d-73fa-4b42-9429-778192473081">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2604,7 +2580,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Cliente" id="7adc9ebc-29ef-4224-beff-cd4fb3e79abd">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Cliente" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2667,7 +2643,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="b4ed311b-572f-462c-abb3-354da5562703" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0">
+    <con:testCase id="b4ed311b-572f-462c-abb3-354da5562703" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de leitura da base de clientes</con:description>
       <con:settings>
         <con:setting id="IncludeOverview">true</con:setting>
@@ -2692,13 +2668,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Clientes Validação de Leitura</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Clientes Validação de Leitura</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -2711,7 +2681,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="b49c9328-5e2d-4781-a91f-4af740b398ee">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2771,7 +2741,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Leitura de Clientes" id="bed1cc5b-33b7-4c0e-9142-a8c963e40ac9">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Leitura de Clientes" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2842,7 +2812,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="7612d852-b40f-44f7-98d7-2c4431cbda7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0">
+    <con:testCase id="7612d852-b40f-44f7-98d7-2c4431cbda7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de gravação da base de clientes</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -2861,13 +2831,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Clientes Validação de Gravação</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Clientes Validação de Gravação</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -2880,7 +2844,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="e5621f1d-653e-4054-b43a-5d8cb051c44a">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -2940,7 +2904,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Gravação de Cliente" id="fe05824e-d8ad-4259-b408-61b978ef6839">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Gravação de Cliente" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3011,7 +2975,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="80ea6461-1cee-4251-9187-870b51f73195" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Produtos" searchProperties="true" timeout="0" disabled="true">
+    <con:testCase id="80ea6461-1cee-4251-9187-870b51f73195" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Produtos" searchProperties="true" timeout="0" disabled="true" maxResults="0">
       <con:description>Caso de teste para popular a base de dados de produtos</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3028,7 +2992,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="4010bbc0-f7c9-404f-92eb-b44d79876448">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="e975860c-6220-4038-bd02-547a20a35af2" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3078,13 +3042,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#jsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#jsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -3095,7 +3053,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Produtos" id="29d2ef34-6751-47fa-a427-6994ba711481">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Produtos" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3146,7 +3104,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="b22e8fda-31c5-4109-94f8-66dcb3689c9b">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3196,7 +3154,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos" id="2fbbf410-71a3-42ab-bf02-c6d5eff34e44">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3240,7 +3198,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="fe63e9eb-d502-42fd-9c69-8373f5ea3d2e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - orderBy" searchProperties="true" timeout="0">
+    <con:testCase id="fe63e9eb-d502-42fd-9c69-8373f5ea3d2e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - orderBy" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro orderBy para filtrar os produtos retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3257,7 +3215,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="28d0b899-04bc-4c01-9235-7251eb4e6456">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3317,7 +3275,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos Com Filtros" id="94eb7fb6-7ecf-4a2b-996a-98c0a62b2ad0">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3372,7 +3330,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="3a393bf4-b46a-4b23-9106-994e570540b7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - startAt e endAt" searchProperties="true" timeout="0">
+    <con:testCase id="3a393bf4-b46a-4b23-9106-994e570540b7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - startAt e endAt" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes dos parâmetros startAt e endAt para filtrar os produtos retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3391,13 +3349,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcepath}</file>
-              <worksheet>Produtos startAt endAt</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcepath}</file><worksheet>Produtos startAt endAt</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -3411,7 +3363,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="210fb9a2-11ba-440a-809f-37a18ac35bb6">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3462,7 +3414,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos Com Filtros" id="7164a085-f09d-44d9-95b1-b8e6ded1efa3">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3525,7 +3477,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="a4b37e9a-dc2d-4251-81f0-3128292553ce" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - equalTo" searchProperties="true" timeout="0">
+    <con:testCase id="a4b37e9a-dc2d-4251-81f0-3128292553ce" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - equalTo" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro equalTo para filtrar os produtos retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3544,13 +3496,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Produtos equalTo</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Produtos equalTo</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -3563,7 +3509,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="82638d49-8a2c-4e88-86d4-9ea4fc77a147">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3614,7 +3560,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos Com Filtros" id="cabf812c-2258-45fc-9b10-d4a06cc927ad">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3678,7 +3624,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="6147321a-7bdf-453b-aeec-f5eeb7d16ba0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - limitToFirst" searchProperties="true" timeout="0">
+    <con:testCase id="6147321a-7bdf-453b-aeec-f5eeb7d16ba0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - limitToFirst" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToFirst para filtrar os produtos retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3695,7 +3641,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="7110dd9a-779a-4d3e-bd10-58427c450637">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3743,7 +3689,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos Com Filtros" id="94cc79fc-e0ec-43fb-9389-b2197a2a7513">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3793,7 +3739,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="ff0ef5e9-d3e7-4e9f-9fbb-7b7ef08fea9e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - limitToLast" searchProperties="true" timeout="0">
+    <con:testCase id="ff0ef5e9-d3e7-4e9f-9fbb-7b7ef08fea9e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Produtos - limitToLast" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToLast para filtrar os produtos retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3810,7 +3756,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="4ddbb068-8236-46ed-98cc-b40f84b95f0f">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3858,7 +3804,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos Com Filtros" id="2d2c7fdd-ca7f-4906-8753-3e9ad7d3016c">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3909,7 +3855,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="733fc706-6286-4777-8271-6854afea8b3d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Consultar Produto" searchProperties="true" timeout="0">
+    <con:testCase id="733fc706-6286-4777-8271-6854afea8b3d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Consultar Produto" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Teste do método GET na base de clientes</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -3926,7 +3872,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="78bed780-5987-4009-b699-a2ed257a1a80">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -3976,7 +3922,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Produto" id="bda314fd-71a4-4db6-bd98-76cdeec61be2">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Produto" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4036,7 +3982,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="e580afc2-1bec-4332-943b-58b617fa06b2">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4086,7 +4032,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Deletar Produto" id="adcf9678-6532-4686-9eb0-3510bbd0acdb">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Deletar Produto" id="2fa53e89-d5dc-4cd0-9143-9d203131b8bf" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4117,7 +4063,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos" id="e938a465-d636-49cb-8d50-c09ab6a57591">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4177,7 +4123,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="6b850f79-6de4-46d4-b35c-56c21abd39df">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4227,7 +4173,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Produtos" id="c5f73162-d642-4834-9b64-d65233c9a0ff">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Produtos" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4287,7 +4233,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos" id="e52b85e7-5850-4a04-851d-8fc78624d387">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4347,7 +4293,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="3a3eea67-0444-4a98-973d-6b1c4627cec6">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4397,7 +4343,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Produtos" id="7413b2b3-18ba-4119-bd7c-1b9477192538">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Produtos" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4457,7 +4403,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Produtos" id="931963ba-1c2d-4868-bb20-9c6af0ab6576">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Produtos" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4520,7 +4466,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="36d56a3b-b7dc-4e3c-92d4-21e14d3a723f">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4570,7 +4516,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Produto" id="7c8a6f6d-12a3-478d-a0e7-ea89496486d5">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Produto" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4635,7 +4581,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Produto" id="2175fce3-2d9f-4201-b834-340321d4079a">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Produto" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4697,13 +4643,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Produtos</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Produtos</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -4714,7 +4654,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="54cdf77d-2294-4d72-8af2-7dfa83c324d5">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4764,7 +4704,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Produto" id="685e79c0-5cab-450b-a8bc-2dae8ff5ce64">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Produto" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4827,7 +4767,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="a6488d62-4c14-48f1-bc12-00d624021b29" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0">
+    <con:testCase id="a6488d62-4c14-48f1-bc12-00d624021b29" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de leitura da base de produtos</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -4846,13 +4786,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Produtos Validação de Leitura</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Produtos Validação de Leitura</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -4865,7 +4799,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="a3f608c0-718e-4aba-9939-968d1533ebfc">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4916,7 +4850,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Leitura de Produtos" id="2429eb66-2a7b-476e-8717-da05c2b82ed2">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Leitura de Produtos" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -4987,7 +4921,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="ca4593c0-53be-4f3a-8945-5180dadb4312" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0">
+    <con:testCase id="ca4593c0-53be-4f3a-8945-5180dadb4312" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de gravação da base de produtos</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5006,13 +4940,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Produtos Validação de Gravação</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Produtos Validação de Gravação</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -5025,7 +4953,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="564e8adc-28f9-4cfa-ad68-bcdd53404aef">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5076,7 +5004,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+cli
       </con:testStep>
       <con:testStep type="restrequest" name="Gravação de Produto" id="04d9b0e7-a989-481f-9f71-939282fa5227">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Gravação de Produto" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5148,7 +5076,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="96affb7e-2b01-4f93-8570-2d3cf42cd678" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Fornecedores" searchProperties="true" timeout="0" disabled="true">
+    <con:testCase id="96affb7e-2b01-4f93-8570-2d3cf42cd678" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Fornecedores" searchProperties="true" timeout="0" disabled="true" maxResults="0">
       <con:description>Caso de teste para popular a base de dados de fornecedores</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5165,7 +5093,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="194b9436-bd9a-40ab-9afe-e13b9c932a5e">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="e975860c-6220-4038-bd02-547a20a35af2" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5215,13 +5143,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#jsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#jsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -5232,7 +5154,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Fornecedores" id="48e86f35-5114-4da7-95f2-e9321c0cb361">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Fornecedores" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5283,7 +5205,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="cb8cd217-0c46-457c-8263-2fa7e103d840">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5333,7 +5255,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+pro
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores" id="cafcbc9a-10a0-4d52-8d45-4cd7b9e8a8a9">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5402,7 +5324,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="265ed631-8458-4f87-957a-00c708abbaaf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - orderBy" searchProperties="true" timeout="0">
+    <con:testCase id="265ed631-8458-4f87-957a-00c708abbaaf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - orderBy" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro orderBy para filtrar os fornecedores retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5419,7 +5341,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="c12dda5e-7c38-40c3-9d2f-3071e14ec0b6">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5479,7 +5401,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="cb190893-d269-48c2-8f17-3064d144a8ac">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5534,7 +5456,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="9bff3107-3c0a-4d4d-be38-233c28bd0e4b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - startAt e endAt" searchProperties="true" timeout="0">
+    <con:testCase id="9bff3107-3c0a-4d4d-be38-233c28bd0e4b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - startAt e endAt" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes dos parâmetros startAt e endAt para filtrar os fornecedores retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5553,13 +5475,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcepath}</file>
-              <worksheet>Fornecedores startAt endAt</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcepath}</file><worksheet>Fornecedores startAt endAt</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -5573,7 +5489,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="9efe8677-11d3-4314-99f2-9e512285cba5">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5624,7 +5540,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="88c86919-f57b-4e59-b46f-d2ac55f44c92">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5687,7 +5603,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="d666ca5f-7066-4429-8eea-d1dbc2d5ec14" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - equalTo" searchProperties="true" timeout="0">
+    <con:testCase id="d666ca5f-7066-4429-8eea-d1dbc2d5ec14" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - equalTo" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro equalTo para filtrar os fornecedores retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5706,13 +5622,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Fornecedores equalTo</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Fornecedores equalTo</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -5725,7 +5635,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="9f6daa64-dfc2-4ec4-9d8c-fb6c8419b785">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5776,7 +5686,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="a7487342-527a-4d8a-a488-fc7a5175322f">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5840,7 +5750,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="2f0574b4-6840-417c-aa47-2a05c5a07ee5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - limitToFirst" searchProperties="true" timeout="0">
+    <con:testCase id="2f0574b4-6840-417c-aa47-2a05c5a07ee5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - limitToFirst" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToFirst para filtrar os fornecedores retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5857,7 +5767,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="e39dab7c-345a-414a-a862-cd8ccc2abdd3">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5905,7 +5815,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="7ed08d20-569c-47d8-b4cc-2a6a608f4256">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -5955,7 +5865,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="0522e87a-9610-4eca-a67e-785e7b2c3149" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - limitToLast" searchProperties="true" timeout="0">
+    <con:testCase id="0522e87a-9610-4eca-a67e-785e7b2c3149" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Fornecedores - limitToLast" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes do parâmetro limitToLast para filtrar os fornecedores retornados</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -5972,7 +5882,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="74597285-ac87-489d-87e6-15acfed2ce4d">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6020,7 +5930,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="c9f283d2-c3b3-4f2a-a77c-6f22778ae2d8">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6088,7 +5998,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="3777baa7-a50e-4b10-a4ea-58c8805a4ac3">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6138,7 +6048,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Fornecedor" id="51ce1718-0e11-4ce3-b9ac-6e9e1b36fd2c">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Fornecedor" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6198,7 +6108,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="af6b5991-8c49-418e-986a-6834ddadae18">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6248,7 +6158,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Deletar Fornecedor" id="846b6030-9fec-4703-b232-f5422e541ad7">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Deletar Fornecedor" id="2fa53e89-d5dc-4cd0-9143-9d203131b8bf" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6279,7 +6189,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores" id="d302c59c-17ba-4af1-86b7-9261c4e937e7">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6339,7 +6249,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="44cdcb2e-863c-4e93-8916-f6b594aecf08">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6389,7 +6299,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Fornecedores" id="c3c15948-6494-42f1-b71c-7e539428a7cc">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Fornecedores" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6455,7 +6365,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores" id="2b400a5e-c7c3-4cfe-bb97-7383f885f132">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6515,7 +6425,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="609e0c1d-7b28-4aae-b9ce-b8a35b753a02">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6565,7 +6475,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Fornecedores" id="adb920d0-2b44-4b92-b5d1-f2c0392ad452">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Fornecedores" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6631,7 +6541,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores" id="93b8d681-09d7-4b30-b523-7452956a36bb">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6694,7 +6604,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="415dc9d5-c9ea-4a41-af85-5ef4df4a299f">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6744,7 +6654,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Fornecedor" id="ec44d953-59c8-43ea-a2cf-72fb5e85e214">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Fornecedor" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6811,7 +6721,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Fornecedor" id="f7f5efa7-efea-4130-a309-163ee6593e1d">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Fornecedor" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6873,13 +6783,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Fornecedores</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Fornecedores</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -6890,7 +6794,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="4eaa86d4-dfa2-4c20-8c21-3822832609df">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -6940,7 +6844,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Fornecedor" id="c80147e7-1cf5-4755-9d7f-596f4c760100">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Fornecedor" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7003,7 +6907,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="bd77b64d-8bef-4cfd-b794-4bd77fd60f60" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0">
+    <con:testCase id="bd77b64d-8bef-4cfd-b794-4bd77fd60f60" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de leitura da base de fornecedores</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -7022,13 +6926,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Fornecedores Validação Leitura</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Fornecedores Validação Leitura</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7041,7 +6939,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="109e55e1-eaea-40e4-8c19-05944e91b8e6">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7092,7 +6990,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Leitura de Fornecedores" id="da1ff14b-ac36-4115-95d1-e75f3ff5b84c">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Leitura de Fornecedores" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7163,7 +7061,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="a7538357-2218-4cee-b177-2e73d9a3c8d2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0">
+    <con:testCase id="a7538357-2218-4cee-b177-2e73d9a3c8d2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de gravação da base de fornecedores</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -7182,13 +7080,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Fornecedores Validação Gravação</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Fornecedores Validação Gravação</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7201,7 +7093,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="55f963b0-895b-43fd-9ed4-fb56805f6d5b">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7252,7 +7144,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Gravação de Fornecedor" id="11b99fdb-0c2d-4ad2-8ce1-e797f5ddc439">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Gravação de Fornecedor" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7325,7 +7217,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="d28e6b21-1add-4b80-9255-a5eee9517221" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Clientes, Produtos e Vendas" searchProperties="true" timeout="0" disabled="true">
+    <con:testCase id="d28e6b21-1add-4b80-9255-a5eee9517221" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Popular Clientes, Produtos e Vendas" searchProperties="true" timeout="0" disabled="true" maxResults="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="properties" name="Propriedades" id="97533a77-247f-4b4a-b46c-4a60d0de3d0b">
@@ -7341,7 +7233,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="5747776f-e750-46f5-b81e-ad430901e187">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7394,13 +7286,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#clientesJsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#clientesJsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7411,7 +7297,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Clientes" id="93b12046-6fac-46ad-839c-d2653cc9165c">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Clientes" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7446,13 +7332,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#produtosJsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#produtosJsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7463,7 +7343,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Produtos" id="bccc9241-6801-409c-95e2-914b2faeeb6f">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Produtos" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7498,13 +7378,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="File">
-            <con:configuration>
-              <fileName>${#TestSuite#vendasJsonPath}</fileName>
-              <separator>$</separator>
-              <trim>true</trim>
-              <charset>utf-8</charset>
-              <quotedValues>false</quotedValues>
-            </con:configuration>
+            <con:configuration><fileName>${#TestSuite#vendasJsonPath}</fileName><separator>$</separator><trim>true</trim><charset>utf-8</charset><quotedValues>false</quotedValues></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7515,7 +7389,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Popular Nó de Vendas" id="845fe181-6a70-4d5a-b20b-fe3157885536">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Popular Nó de Vendas" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7554,7 +7428,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="d4505de6-8549-4624-bc6e-4f90540e2d4e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Listar Todas as Vendas" searchProperties="true" timeout="0">
+    <con:testCase id="d4505de6-8549-4624-bc6e-4f90540e2d4e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Listar Todas as Vendas" searchProperties="true" timeout="0" maxResults="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="properties" name="Propriedades" id="e2ccc43a-31fd-4d2f-8471-50f97c5a7437">
@@ -7570,7 +7444,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="5ce197f8-b388-45eb-b9b9-8db31596aa6d">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7620,7 +7494,7 @@ testSuite.setPropertyValue("jsonPath", new File(dataSourceDir+File.separator+for
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas" id="397129f8-b6cf-45e4-8136-08ad3ddb41c1">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7711,7 +7585,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="8dd85ee5-da88-4b87-a567-f95f4a1f2f36" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - orderBy" searchProperties="true" timeout="0">
+    <con:testCase id="8dd85ee5-da88-4b87-a567-f95f4a1f2f36" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - orderBy" searchProperties="true" timeout="0" maxResults="0">
       <con:description/>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -7728,7 +7602,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="fa997c59-3b68-41b1-b828-1a1eb5e34d8b">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7788,7 +7662,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="aae4da2e-5849-4dd7-993c-0c0a294cedc2">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-OrderBy" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7843,7 +7717,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="d345e55a-036e-4baa-a72b-3227c1976134" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - startAt e endAt" searchProperties="true" timeout="0">
+    <con:testCase id="d345e55a-036e-4baa-a72b-3227c1976134" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - startAt e endAt" searchProperties="true" timeout="0" maxResults="0">
       <con:description/>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -7862,13 +7736,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcepath}</file>
-              <worksheet>Vendas startAt endAt</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcepath}</file><worksheet>Vendas startAt endAt</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -7882,7 +7750,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="99fe857e-3b70-4183-99f1-b0720c2bb80a">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7933,7 +7801,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="afdc6455-3294-485f-9fca-e61d4acdb9a6">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterStartEndAt" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -7996,7 +7864,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="ec8299e4-a44d-4e09-ade6-7287dc9bb41d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - equalTo" searchProperties="true" timeout="0">
+    <con:testCase id="ec8299e4-a44d-4e09-ade6-7287dc9bb41d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - equalTo" searchProperties="true" timeout="0" maxResults="0">
       <con:description/>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -8015,13 +7883,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Vendas equalTo</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Vendas equalTo</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -8034,7 +7896,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="340c52fd-1311-4a9c-81ae-3b07e69a098b">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8085,7 +7947,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Fornecedores Com Filtros" id="e57c0ad9-cab4-4a62-aed9-7f59f7e566e9">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" methodName="GET-FilterEqualTo" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Fornecedores Com Filtros" id="682afa59-80ba-4c1d-95b6-cef718100f8d" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8149,7 +8011,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="4ad39ee0-fdcf-4617-a42c-701d81edd34f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToFirst" searchProperties="true" timeout="0">
+    <con:testCase id="4ad39ee0-fdcf-4617-a42c-701d81edd34f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToFirst" searchProperties="true" timeout="0" maxResults="0">
       <con:description/>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -8166,7 +8028,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="27479664-0661-47a7-b524-28403d8e5421">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8214,7 +8076,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="9d98a311-eb8a-4f59-a41a-68ee2e96d10d">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToFirst" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8264,7 +8126,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="8ff5f89c-60ad-4580-a24b-a82dce7e2ccc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToLast" searchProperties="true" timeout="0">
+    <con:testCase id="8ff5f89c-60ad-4580-a24b-a82dce7e2ccc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Filtrar Vendas - limitToLast" searchProperties="true" timeout="0" maxResults="0">
       <con:description/>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -8281,7 +8143,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="2b20a93c-80c5-4889-830a-c59043947ac4">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" methodName="VerifyPassword" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="f0a6c148-e374-486d-90e4-8743243b5158" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8329,7 +8191,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas Com Filtros" id="757e7ad2-77d3-4ec4-89af-10fff167ed06">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET-LimitToLast" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas Com Filtros" id="4c1073d2-77d2-40e9-aba6-2257c828b776" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8397,7 +8259,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="fa301148-2fab-45ce-80fa-b38710fb9f0a">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8447,7 +8309,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Venda" id="81dd1706-0a1d-4887-9958-cbe974b332b9">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8507,7 +8369,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="039581be-445e-4c85-ac41-44d16970768f">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8557,7 +8419,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Deletar Venda" id="14ff9ce3-f1d7-4536-8da8-dc299e7532b1">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="DELETE" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Deletar Venda" id="2fa53e89-d5dc-4cd0-9143-9d203131b8bf" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8588,7 +8450,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Venda" id="20dc09e4-12e8-4dd5-9d98-555a6fd858f2">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8648,7 +8510,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="b9a0d9dc-9321-4535-a6d6-ca6d0714793d">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8698,7 +8560,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Vendas" id="47ee9488-b2f7-40cb-922d-60f538acc1c8">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Vendas" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8756,7 +8618,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas" id="13e4fb34-3919-4f44-9f45-a73b0942e5c2">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8816,7 +8678,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="ca42a4b2-d1a8-4069-ae45-571b1be39f7e">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8866,7 +8728,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Lista de Vendas" id="e2b5effb-9d9e-4452-81f5-c74566b4da8a">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Lista de Vendas" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8924,7 +8786,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Listar Vendas" id="17c61fb3-f028-48cf-8f8c-862da1881c94">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Listar Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -8988,7 +8850,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="1549be0d-177d-497c-b873-3f830b9310cb">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9038,7 +8900,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Venda" id="f9c2fc00-7217-489d-b368-317d547a2303">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Venda" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9093,7 +8955,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Consultar Venda" id="ba4ce519-2ccb-4e05-85d9-a01d3f149b15">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Consultar Venda" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9160,13 +9022,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Vendas</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Vendas</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -9176,7 +9032,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="56664085-f444-4ecf-865b-8d47cf682fb8">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9226,7 +9082,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Incluir Venda" id="f0742655-63a7-49b6-8705-1898d0c86cd0">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Incluir Venda" id="8ab8f84f-b96a-48ee-8b90-ee58cec4e46b" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9287,7 +9143,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="5b89974f-a8c7-4ed3-b292-3db07d0fcd13" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0">
+    <con:testCase id="5b89974f-a8c7-4ed3-b292-3db07d0fcd13" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Leitura" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de leitura da base de fornecedores</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -9306,13 +9162,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Vendas Validação de Leitura</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Vendas Validação de Leitura</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -9325,7 +9175,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="71dacd4d-42db-4a30-9f87-e466a562b6b2">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9376,7 +9226,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Leitura de Vendas" id="aee94f53-fae2-4bf6-89bf-d15cbc088f95">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Leitura de Vendas" id="29970b05-95b6-44e8-9ece-a905db662c28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9447,7 +9297,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="34b4dd71-bc78-4e26-b590-8ca2abca891d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0">
+    <con:testCase id="34b4dd71-bc78-4e26-b590-8ca2abca891d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Validações de acesso - Gravação" searchProperties="true" timeout="0" maxResults="0">
       <con:description>Testes de validação de acesso de gravação da base de fornecedores</con:description>
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -9466,13 +9316,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
-            <con:configuration>
-              <file>${#TestSuite#dataSourcePath}</file>
-              <worksheet>Vendas Validação de Gravação</worksheet>
-              <cell>A1</cell>
-              <ignoreEmpty>true</ignoreEmpty>
-              <evaluateFormulas>false</evaluateFormulas>
-            </con:configuration>
+            <con:configuration><file>${#TestSuite#dataSourcePath}</file><worksheet>Vendas Validação de Gravação</worksheet><cell>A1</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
           </con:dataSource>
           <con:shared>true</con:shared>
           <con:restartShared>true</con:restartShared>
@@ -9485,7 +9329,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Obter Token de Autorização" id="fe4d2bd7-8ea8-4bff-abb0-a346f672eace">
         <con:settings/>
-        <con:config service="https://www.googleapis.com" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="Google APIs" resourcePath="" methodName="VerifyPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Obter Token de Autorização" id="77bbe658-429d-4176-9c65-8ab3b342f377" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -9536,7 +9380,7 @@ for(int i = 0; i &lt; responseJson.values().size(); i++) {
       </con:testStep>
       <con:testStep type="restrequest" name="Gravação de Vendas" id="ea1b2ec0-fa1a-4002-aab4-3cb758753647">
         <con:settings/>
-        <con:config service="https://base2-soapui.firebaseio.com" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:config service="FirebaseEndPoints" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Gravação de Vendas" id="1cdc27ab-b0d0-4285-ba58-0a9ef07b0bd9" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
