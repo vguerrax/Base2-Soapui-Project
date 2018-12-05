@@ -1,20 +1,20 @@
 # PROETO DE AUTOMAÇÃO
-#API REST
+# API REST
 
 
 
 
-#VICTOR GUERRA
+# VICTOR GUERRA
 
-#1.	Introdução
+# 1.	Introdução
 Este documento tem como objetivo apresentar o Projeto de Automação de API Rest com SoapUI, tratando a estrutura e composição do projeto, a API sob testes e seus endpoints.
 Para o projeto, foi utilizada a API disponibilizada pela plataforma Firebase para gerenciamento de um banco de dados NoSQL. A seguir farei uma breve explicação do que é o Firebase e como funciona esta API.
-#2.	Firebase
+# 2.	Firebase
 O Firebase é uma plataforma para desenvolvimento web e mobile que disponibiliza diversas ferramentas de beckend para autenticação, armazenamento, hospedagem entre outros.
  
 As ferramentas utilizadas no projeto são Authentication para autenticação e Realtime Database para gerenciamento de dados.
 
-#Authentication
+# Authentication
 Através da ferramenta Authentication é possível gerenciar os métodos de autenticação da aplicação. Há vários métodos de autenticação disponíveis, tais como emial e senha, Facebook, Google, Twitter, etc.
 Para tornar a autenticação o mais simples possível, o método utilizado para o projeto foi email e senha. Para tal foram criados quatro usuários, cada um com um perfil de acesso, sendo eles:
 •	Administrador;
@@ -22,7 +22,7 @@ Para tornar a autenticação o mais simples possível, o método utilizado para 
 •	Estoquista;
 •	Vendedor.
 
-#Realtime Database
+# Realtime Database
 O Realtime Database é a ferramente de banco de dados do Firebase. Através dele é disponibilizado um banco de dados NoSQL atualizado em tempo real na aplicação e com possibilidade de acesso off-line.
 A ferramenta disponibiliza opções para estruturar a base, adicionando, alterando ou removendo dados manualmente, além de uma API rest para acesso aos dados. Os dados no Realtime Database são estruturados como em um JSON, sendo composto por vários nós.
  
@@ -32,7 +32,7 @@ Outra opção disponilizada pelo Realtime Database são as rules, regras de aces
 •	Validade – Para validação dos dados inseridos;
 •	IndexOn – Para definir os índices dos nós.
  
-#3.	A API do Realtime Database
+# 3.	A API do Realtime Database
 Como citado anteriormente, o Realtime Database disponibiliza uma API para gerenciamento dos dados gravados. Esta api pode ser acessada através da URL https://<codigo_do_projeto>.firebaseio.com/<caminho_do_no>.json. Logo para acessar os dados de clientes basta realizar uma chamada ao endpoint https://base2-sopaui.firebaseio.com/clientes.json.
 As requisições possíveis para a API são:
 •	GET – para realizar consulta aos dados;
@@ -62,7 +62,7 @@ O retorno dessa requisição será parecido com o JSON a seguir, onde idToken é
    "expiresIn": "3600"
 }
 
-#Parâmetros de Query
+# Parâmetros de Query
 A API do Realtime Database aceita diversos parâmetros para filtrar e ordenar os dados retornados. Segue a lista dos parâmetros e como utiliza-los:
 •	orderBy – Utilizado para ordenação, passando a chave do nó que será utilizado para ordernar os dados ou “$key” para ordenar pela chave. 
 Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”;
@@ -74,19 +74,19 @@ Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&li
 Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&limitToFirst=5 (retorna apenas os 5 últimos clientes, ordenados por nome);
 •	equalTo – Utilizado para filtrar os dados retornados. Filtra os dados para aqueles cujo valor da chave definida pelo orderBy é igual ao valor passado no parâmetro.
 Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&equalTo=”João da Silva” (retorna apenas clientes cujo nome seja “João da Silva”).
-#4.	Estrutura do Projeto
+# 4.	Estrutura do Projeto
 Serão apresentadas a seguir as estruturas de arquivos, de requisições e de testes do projeto.
 
-#Estrutura de Arquivos
+# Estrutura de Arquivos
 A estrutura de arquivos do projeto contém os seguintes elementos:
 •	DataSources – Pasta para armazenar todos os arquivos para implementação de data-driven e criação de massa de testes;
 •	Base2-SoapUi-soapui-project.xml – Arquivo do projeto;
 •	README.md – Arquivo de informações para GitHub.
  
-#Estrutura de Requisições
+# Estrutura de Requisições
 As requisições foram organizadas da seguinte forma:
 
-#Estrutura de Testes
+# Estrutura de Testes
 Os testes foram organizados em quatro suítes de teste, uma para cada nó tradado pelos testes, sendo estas:
 •	Clientes;
 •	Produtos;
