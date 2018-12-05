@@ -86,7 +86,22 @@ A estrutura de arquivos do projeto contém os seguintes elementos:
 * README.md – Arquivo de informações para GitHub.
  
 ### Estrutura de Requisições
-As requisições foram organizadas da seguinte forma:
+As requisições foram organizadas dentro de dois serviços, da seguinte forma:
+
+* FirebaseEndPoints – concentra todas as requisições à URL https://base2-soapui.firebaseio.com/ e suas variações. Possui chamadas com os métodos: GET, POST, PUT, DELETE, PATCH. As requisições deste serviço são:
+	* GET – Definição de uma requisição GET simples;
+	* POST – Definição de uma requisição POST simples;
+	* PUT – Definição de uma requisição POST simples;
+	* DELETE – Definição de uma requisição POST simples;
+	* PATCH – Definição de uma requisição PATCH simples;
+	* GET-FilterStartEndAt – Definição de uma requisição GET com os parâmetros startAt e endAt;
+	* GET-FilterEqualTo – Definição de uma requisição GET com o parâmetro equalTo;
+	* GET-LimitToFirst – Definição de uma requisição GET com o parâmetro limitToFirst;
+	* GET-LimitToLast – Definição de uma requisição GET com o parâmetro limitToLast;
+	* GET-OrderBy – Definição de uma requisição GET com o parâmetro orderBy;
+
+	* GoogleAPIs – contém a requisição de autenticação, uma requisição POST feita à URL https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword conforme citado anteriormente.
+
 
 ### Estrutura de Testes
 Os testes foram organizados em quatro suítes de teste, uma para cada nó tradado pelos testes, sendo estas:
