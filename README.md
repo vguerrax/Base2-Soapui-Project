@@ -1,57 +1,54 @@
-# PROETO DE AUTOMAÇÃO
-# API REST
+# PROETO DE AUTOMAÇÃO - API REST
 
-
-
-
-# VICTOR GUERRA
-
-# 1.	Introdução
+## 1.	Introdução
 Este documento tem como objetivo apresentar o Projeto de Automação de API Rest com SoapUI, tratando a estrutura e composição do projeto, a API sob testes e seus endpoints.
 Para o projeto, foi utilizada a API disponibilizada pela plataforma Firebase para gerenciamento de um banco de dados NoSQL. A seguir farei uma breve explicação do que é o Firebase e como funciona esta API.
-# 2.	Firebase
+## 2.	Firebase
 O Firebase é uma plataforma para desenvolvimento web e mobile que disponibiliza diversas ferramentas de beckend para autenticação, armazenamento, hospedagem entre outros.
  
 As ferramentas utilizadas no projeto são Authentication para autenticação e Realtime Database para gerenciamento de dados.
 
-# Authentication
+### Authentication
 Através da ferramenta Authentication é possível gerenciar os métodos de autenticação da aplicação. Há vários métodos de autenticação disponíveis, tais como emial e senha, Facebook, Google, Twitter, etc.
 Para tornar a autenticação o mais simples possível, o método utilizado para o projeto foi email e senha. Para tal foram criados quatro usuários, cada um com um perfil de acesso, sendo eles:
-•	Administrador;
-•	Financeiro;
-•	Estoquista;
-•	Vendedor.
 
-# Realtime Database
+* Administrador;
+* Financeiro;
+* Estoquista;
+* Vendedor.
+
+### Realtime Database
 O Realtime Database é a ferramente de banco de dados do Firebase. Através dele é disponibilizado um banco de dados NoSQL atualizado em tempo real na aplicação e com possibilidade de acesso off-line.
 A ferramenta disponibiliza opções para estruturar a base, adicionando, alterando ou removendo dados manualmente, além de uma API rest para acesso aos dados. Os dados no Realtime Database são estruturados como em um JSON, sendo composto por vários nós.
  
 Outra opção disponilizada pelo Realtime Database são as rules, regras de acesso aos dados. As regras podem ser implementadas universalmente para todos os nós ou individualmente para cada nó e a sintaxe das regras é parecida com a do Javascript. São quatro tipos de regras:
-•	Read – para conceder permissão de leitura aos nós;
-•	Write – para conceder permissão de gravação aos nós;
-•	Validade – Para validação dos dados inseridos;
-•	IndexOn – Para definir os índices dos nós.
+* Read – para conceder permissão de leitura aos nós;
+* Write – para conceder permissão de gravação aos nós;
+* Validade – Para validação dos dados inseridos;
+* IndexOn – Para definir os índices dos nós.
  
-# 3.	A API do Realtime Database
+## 3.	A API do Realtime Database
 Como citado anteriormente, o Realtime Database disponibiliza uma API para gerenciamento dos dados gravados. Esta api pode ser acessada através da URL https://<codigo_do_projeto>.firebaseio.com/<caminho_do_no>.json. Logo para acessar os dados de clientes basta realizar uma chamada ao endpoint https://base2-sopaui.firebaseio.com/clientes.json.
+
 As requisições possíveis para a API são:
-•	GET – para realizar consulta aos dados;
-•	PUT – para gravar ou substituir os dados (se já existirem dados no caminho passado, serão substituídos);
-•	PATCH – para adicionar dados;
-•	POST – para gravar novos dados (sempre que chamada irá gerar uma nova chave única);
-•	DELETE – para deletar dados.
+* GET – para realizar consulta aos dados;
+* PUT – para gravar ou substituir os dados (se já existirem dados no caminho passado, serão substituídos);
+* PATCH – para adicionar dados;
+* POST – para gravar novos dados (sempre que chamada irá gerar uma nova chave única);
+* DELETE – para deletar dados.
+
 Caso existam regras de leitura/gravação nos nós do banco de dados, é necessário autenticar a requisição através do parâmetro acess_token. Através deste parâmetro deve ser passado para a requisição o token de acesso do usuário responsável pelos dados.
 Obter Token de Acesso
-Para obter o token de acesso de um usuário basta realizar uma chamada ao endpoint https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword passando o parâmetro key com a chave do projeto no Firebase e o email e senha para autenticação no corpo da requisição, conforme exemplo a seguir:
-https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA
+Para obter o token de acesso de um usuário basta realizar uma chamada ao endpoint _https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword_ passando o parâmetro key com a chave do projeto no Firebase e o email e senha para autenticação no corpo da requisição, conforme exemplo a seguir:
+_https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA_
 Body:
-{
+_{
 	email : "teste@teste.com",
 	password : "teste123",
 	returnSecureToken : true
-}
+}_
 O retorno dessa requisição será parecido com o JSON a seguir, onde idToken é o token de acesso.
-{
+_{
    "kind": "identitytoolkit#VerifyPasswordResponse",
    "localId": "YMprHGAwOHedspjGgqiJ93vqt4s1",
    "email": "vendedor@teste.com",
@@ -60,7 +57,7 @@ O retorno dessa requisição será parecido com o JSON a seguir, onde idToken é
    "registered": true,
    "refreshToken": "AGK09ANVn187e9lrzKzYgIS_qiimm1XxmCKVq1Z-4ScaJZv4WLRM5F1jGFdPqa7EoxtkLh8IBuB_3cggX2nymaEwnQZSzsjbVZrgGXbc-o2LIBzGOPqwEMINaaR-v4rZ443nkHTVQiVoxL-0BHIRAVPM40TdUA19jQerlnLhDicz0abNelqt2IAhtunkAMObJsXcI-bOi8R0cOPRJLJFu1BZedZRO2pjoA",
    "expiresIn": "3600"
-}
+}_
 
 # Parâmetros de Query
 A API do Realtime Database aceita diversos parâmetros para filtrar e ordenar os dados retornados. Segue a lista dos parâmetros e como utiliza-los:
