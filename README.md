@@ -28,7 +28,7 @@ Outra opção disponilizada pelo Realtime Database são as rules, regras de aces
 * IndexOn – Para definir os índices dos nós.
  
 ## 3.	A API do Realtime Database
-Como citado anteriormente, o Realtime Database disponibiliza uma API para gerenciamento dos dados gravados. Esta api pode ser acessada através da URL https://<codigo_do_projeto>.firebaseio.com/<caminho_do_no>.json. Logo para acessar os dados de clientes basta realizar uma chamada ao endpoint https://base2-sopaui.firebaseio.com/clientes.json.
+Como citado anteriormente, o Realtime Database disponibiliza uma API para gerenciamento dos dados gravados. Esta api pode ser acessada através da URL _https://<codigo_do_projeto>.firebaseio.com/<caminho_do_no>.json_. Logo para acessar os dados de clientes basta realizar uma chamada ao endpoint _https://base2-sopaui.firebaseio.com/clientes.json_.
 
 As requisições possíveis para a API são:
 * GET – para realizar consulta aos dados;
@@ -43,6 +43,7 @@ Para obter o token de acesso de um usuário basta realizar uma chamada ao endpoi
 _https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDrFtY6FOFqFln_Bw917GnWQ3ylca-BVuA_
 
 Body:
+
 _{<br>
 	email : "teste@teste.com",<br>
 	password : "teste123",<br>
@@ -65,15 +66,15 @@ _{<br>
 ### Parâmetros de Query
 A API do Realtime Database aceita diversos parâmetros para filtrar e ordenar os dados retornados. Segue a lista dos parâmetros e como utiliza-los:
 * orderBy – Utilizado para ordenação, passando a chave do nó que será utilizado para ordernar os dados ou “$key” para ordenar pela chave. 
-Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”;
+Exemplo: _https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”_;
 * startAt e endAt – Utilizados combinados com o orderBy para limitar os dados retornados. O startAt indica o valor para o primeiro elemento e o endAt indica o valor para o último elemento da lista de retorno e a chave para comparação é definida no orderBy.
-Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&startAt=”A”&endAt=”M” (lista os clientes cujos nomes estão entre ‘A’ e ‘M’);
+Exemplo: _https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&startAt=”A”&endAt=”M”_ (lista os clientes cujos nomes estão entre ‘A’ e ‘M’);
 * limitToFirst – Utilizado para limitar a quantidade de elementos retornados. Retorna apenas os primeiros n elementos da lista, sendo n o valor passado no parâmetro.
-Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&limitToFirst=5 (retorna apenas os 5 primeiros clientes, ordenados por nome);
+Exemplo: _https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&limitToFirst=5_ (retorna apenas os 5 primeiros clientes, ordenados por nome);
 * limitToLast – Utilizado para limitar a quantidade de elementos retornados. Retorna apenas os últimos n elementos da lista, sendo n o valor passado no parâmetro.
-Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&limitToFirst=5 (retorna apenas os 5 últimos clientes, ordenados por nome);
+Exemplo: _https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&limitToFirst=5_ (retorna apenas os 5 últimos clientes, ordenados por nome);
 * equalTo – Utilizado para filtrar os dados retornados. Filtra os dados para aqueles cujo valor da chave definida pelo orderBy é igual ao valor passado no parâmetro.
-Exemplo: https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&equalTo=”João da Silva” (retorna apenas clientes cujo nome seja “João da Silva”).
+Exemplo: _https://base2-sopaui.firebaseio.com/clientes.json?orderBy=”nome”&equalTo=”João da Silva”_ (retorna apenas clientes cujo nome seja “João da Silva”).
 
 ## 4.	Estrutura do Projeto
 Serão apresentadas a seguir as estruturas de arquivos, de requisições e de testes do projeto.
