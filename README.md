@@ -44,23 +44,23 @@ _https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=A
 
 Body:
 
-_{<br>
-	email : "teste@teste.com",<br>
-	password : "teste123",<br>
-	returnSecureToken : true<br>
+_{<br/>
+email : "teste@teste.com",<br/>
+password : "teste123",<br/>
+returnSecureToken : true<br/>
 }_
 
-O retorno dessa requisição será parecido com o JSON a seguir, onde idToken é o token de acesso:
+O retorno dessa requisição será parecido com o JSON a seguir, onde _idToken_ é o token de acesso:
 
-_{<br>
-   "kind": "identitytoolkit#VerifyPasswordResponse",<br>
-   "localId": "YMprHGAwOHedspjGgqiJ93vqt4s1",<br>
-   "email": "vendedor@teste.com",<br>
-   "displayName": "",<br>
-   "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjIzNTBiNWY2NDM0Zjc2Y2NiM2IxMTlmZGQ4OGQxMzhjOWFjNTVmY2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQzOTYzNzU4LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDM5NjM3NTgsImV4cCI6MTU0Mzk2NzM1OCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Nrxgcp4kVltlotl0Uvm8zhwuejARGX9fxgBX3QKreSyEPg_e0h0N18fwL9FAL5IU3xi7pL24p8Qf-tkdrDqgvq9IOrujd9b2qiCw7TIO8AXApxixnzkjdZTkCiKFv7oweNAIrAb6PoMKmab983BVr9iPNAQn94LttF1t8ou7eznRZY7U_iVK3DBmDEZFwOdTuKIkuu3uLowLwfVwL3MrIPrdgB0NuG8iKxL6l62_rAgjOSJ-qxfqwFgLm9COhyOyTKdaRT-vqi7yR6wkFLCWy1ojd60heNma2EyTAh1D34SIKECXishqWhgx4-G1XXrVOjSwVKdFtTDnWyO9WLPe4g",<br>
-   "registered": true,<br>
-   "refreshToken": "AGK09ANVn187e9lrzKzYgIS_qiimm1XxmCKVq1Z-4ScaJZv4WLRM5F1jGFdPqa7EoxtkLh8IBuB_3cggX2nymaEwnQZSzsjbVZrgGXbc-o2LIBzGOPqwEMINaaR-v4rZ443nkHTVQiVoxL-0BHIRAVPM40TdUA19jQerlnLhDicz0abNelqt2IAhtunkAMObJsXcI-bOi8R0cOPRJLJFu1BZedZRO2pjoA",<br>
-   "expiresIn": "3600"<br>
+_{<br/>
+"kind": "identitytoolkit#VerifyPasswordResponse",<br/>
+"localId": "YMprHGAwOHedspjGgqiJ93vqt4s1",<br/>
+"email": "vendedor@teste.com",<br/>
+"displayName": "",<br/>
+"idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjIzNTBiNWY2NDM0Zjc2Y2NiM2IxMTlmZGQ4OGQxMzhjOWFjNTVmY2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTQzOTYzNzU4LCJ1c2VyX2lkIjoiWU1wckhHQXdPSGVkc3BqR2dxaUo5M3ZxdDRzMSIsInN1YiI6IllNcHJIR0F3T0hlZHNwakdncWlKOTN2cXQ0czEiLCJpYXQiOjE1NDM5NjM3NTgsImV4cCI6MTU0Mzk2NzM1OCwiZW1haWwiOiJ2ZW5kZWRvckB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidmVuZGVkb3JAdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Nrxgcp4kVltlotl0Uvm8zhwuejARGX9fxgBX3QKreSyEPg_e0h0N18fwL9FAL5IU3xi7pL24p8Qf-tkdrDqgvq9IOrujd9b2qiCw7TIO8AXApxixnzkjdZTkCiKFv7oweNAIrAb6PoMKmab983BVr9iPNAQn94LttF1t8ou7eznRZY7U_iVK3DBmDEZFwOdTuKIkuu3uLowLwfVwL3MrIPrdgB0NuG8iKxL6l62_rAgjOSJ-qxfqwFgLm9COhyOyTKdaRT-vqi7yR6wkFLCWy1ojd60heNma2EyTAh1D34SIKECXishqWhgx4-G1XXrVOjSwVKdFtTDnWyO9WLPe4g",<br/>
+"registered": true,<br/>
+"refreshToken": "AGK09ANVn187e9lrzKzYgIS_qiimm1XxmCKVq1Z-4ScaJZv4WLRM5F1jGFdPqa7EoxtkLh8IBuB_3cggX2nymaEwnQZSzsjbVZrgGXbc-o2LIBzGOPqwEMINaaR-v4rZ443nkHTVQiVoxL-0BHIRAVPM40TdUA19jQerlnLhDicz0abNelqt2IAhtunkAMObJsXcI-bOi8R0cOPRJLJFu1BZedZRO2pjoA",<br/>
+"expiresIn": "3600"<br/>
 }_
 
 ### Parâmetros de Query
@@ -122,14 +122,14 @@ As regras do nó clientes estão definidas da seguinte forma no Firebase:
 * **Index**: Os campos indexados são nome, nascimento e sexo.<br/>Definição da regra no Firebase:<br/>_".indexOn" : ["nome", "nascimento", "sexo"]_
 
 * **Validação**: Somente registros que contenham os campos nome, nascimento e sexo podem ser inseridos. O nome deve ter no máximo 100 caracteres e deve ser do tipo string. O nascimento deve ser uma data no formato ‘yyyy-mm-dd’ (Ex.: 1992-06-14). O sexo deve ser do tipo string e deve conter um dos seguintes valores: ‘F’ ou ‘M’.<br/>Definição da regra no Firebase:<br/>
-	_".validate" :  
-	"newData.hasChildren(['nome', 'nascimento', 'sexo']) &&  
-	newData.child('nome').val().length <= 100 &&  
-	newData.child('nome').isString() &&  
-	newData.child('nascimento').val()  
-	.matches(/^[1-9][0-9][0-9][0-9][-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$/) &&  
-	newData.child('sexo').isString() &&  
-	newData.child('sexo').val().matches(/^(M|F)$/)"_  
+	_".validate" :<br/>
+	"newData.hasChildren(['nome', 'nascimento', 'sexo']) &&<br/>
+	newData.child('nome').val().length <= 100 &&<br/>
+	newData.child('nome').isString() &&<br/>
+	newData.child('nascimento').val()<br/>
+	.matches(/^[1-9][0-9][0-9][0-9][-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$/) &&<br/>
+	newData.child('sexo').isString() &&<br/>
+	newData.child('sexo').val().matches(/^(M|F)$/)"_<br/>
 
 Os casos de teste do nó cliente são os seguintes:
 * **Popular Clientes**: Caso de teste que realiza inclusão de clientes na base para execução dos demais testes. Realiza uma chamada POST à requisição GoogleAPIs para obter o token de autenticação e em seguida realiza uma chamada PUT à requisição FirebaseEndPoints, nó clientes, passando o conteúdo do arquivo clientes.json. Está desabilitado e é chamado via script Groovy em cada caso de teste onde um cliente existente é necessário.
@@ -138,7 +138,7 @@ Os casos de teste do nó cliente são os seguintes:
 
 * **Filtrar Clientes - orderBy**: Caso de teste para executar um GET no nó clientes usando o parâmetro orderBy para ordenar os registros (https://base2-sopaui.firebaseio.com/clientes.json?orderBy=””) e validar os registros retornados.
 
-* **Filtrar Clientes - startAt e endAt: Caso de teste para executar um GET no nó clientes usando os parâmetros startAt  e endAt para limitar os registros (https://base2-sopaui.firebaseio.com/clientes.json?startAt=””&endAt=””) e validar os registros retornados.
+* **Filtrar Clientes - startAt e endAt: Caso de teste para executar um GET no nó clientes usando os parâmetros startAt e endAt para limitar os registros (https://base2-sopaui.firebaseio.com/clientes.json?startAt=””&endAt=””) e validar os registros retornados.
 
 * **Filtrar Clientes - equalTo**: Caso de teste para executar um GET no nó clientes usando o parâmetro equalTo para filtrar os registros (https://base2-sopaui.firebaseio.com/clientes.json?equalTo=””) e validar os registros retornados.
 
@@ -150,7 +150,7 @@ Os casos de teste do nó cliente são os seguintes:
 
 * **Deletar Cliente**: Caso de teste para executar um DELETE em uma chave de cliente específica (https://base2-sopaui.firebaseio.com/clientes/cliente01.json) e validar a exclusão.
 
-* **Incluir Lista de Clientes - Acrescentar à Atual**: Caso de teste para executar um PATCH  no nó clientes (https://base2-sopaui.firebaseio.com/clientes.json) acrescentando dados ao nó e validar os registros inseridos.
+* **Incluir Lista de Clientes - Acrescentar à Atual**: Caso de teste para executar um PATCH no nó clientes (https://base2-sopaui.firebaseio.com/clientes.json) acrescentando dados ao nó e validar os registros inseridos.
 
 * **Incluir Lista de Clientes - Substituir Atual**: Caso de teste para executar um PUT no nó clientes (https://base2-sopaui.firebaseio.com/clientes.json) substituindo os dados do nó e validar os registros inseridos.
 
