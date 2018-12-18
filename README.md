@@ -81,7 +81,7 @@ Serão apresentadas a seguir as estruturas de arquivos, de requisições e de te
 
 ### Estrutura de Arquivos
 A estrutura de arquivos do projeto contém os seguintes elementos:
-* **DataSources**: Pasta para armazenar todos os arquivos para implementação de data-driven e criação de massa de testes;
+* **DataSources**: Pasta para armazenar todos os arquivos para implementação de data-driven e criação de massa de testes. Contém os seguintes arquivos:
 	* Clientes_DataSource.xlsx;
 	* Fornecedores_DataSource.xlsx;
 	* Produtos_DataSource.xlsx;
