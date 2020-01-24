@@ -1,0 +1,186 @@
+{
+  "clientes" : {
+    "-Lnwa2tdj3lTKvdaWwts" : {
+      "nascimento" : "1998-10-21",
+      "nome" : "Maria Lopes",
+      "sexo" : "F"
+    },
+    "cliente20" : {
+      "nascimento" : "2018-01-28",
+      "nome" : "Nymeria",
+      "sexo" : "F"
+    },
+    "cliente21" : {
+      "nascimento" : "1998-03-05",
+      "nome" : "Joao da Silva",
+      "sexo" : "M"
+    },
+    "cliente22" : {
+      "nascimento" : "1995-03-25",
+      "nome" : "Josias Amaral",
+      "sexo" : "M"
+    }
+  },
+  "fornecedores" : {
+    "-Lnwa9lJu_N-CxKdsA47" : {
+      "cidade" : "Belo Horizonte",
+      "endereco" : "Rua Fornecedor 11",
+      "nome" : "Teste do fornecedor 11",
+      "ramo" : "Fornecedor 11",
+      "telefone" : "(33) 3333-3333",
+      "uf" : "MG"
+    },
+    "fornecedor11" : {
+      "cidade" : "Belo Horizonte",
+      "endereco" : "Rua Fornecedor 11",
+      "nome" : "Teste do fornecedor 11",
+      "ramo" : "Fornecedor 11",
+      "telefone" : "(33) 3333-3333",
+      "uf" : "MG"
+    },
+    "fornecedor12" : {
+      "cidade" : "Belo Horizonte",
+      "endereco" : "Rua Fornecedor 12",
+      "nome" : "Teste do fornecedor 12",
+      "ramo" : "Fornecedor 12",
+      "telefone" : "(33) 3333-3333",
+      "uf" : "MG"
+    },
+    "fornecedor13" : {
+      "cidade" : "Belo Horizonte",
+      "endereco" : "Rua Fornecedor 13",
+      "nome" : "Teste do fornecedor 13",
+      "ramo" : "Fornecedor 13",
+      "telefone" : "(33) 3333-3333",
+      "uf" : "MG"
+    }
+  },
+  "permissoes" : {
+    "gravacao" : {
+      "clientes" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true
+      },
+      "fornecedores" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "ebhUeAPvzHfHdjZiv5m14x4EC8I2" : true
+      },
+      "permissoes" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true
+      },
+      "produtos" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "W9N9sJRiLEYz64j5HdxvMlAn8Rp1" : true
+      },
+      "vendas" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true
+      }
+    },
+    "leitura" : {
+      "clientes" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true,
+        "ebhUeAPvzHfHdjZiv5m14x4EC8I2" : true
+      },
+      "fornecedores" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true,
+        "W9N9sJRiLEYz64j5HdxvMlAn8Rp1" : true,
+        "ebhUeAPvzHfHdjZiv5m14x4EC8I2" : true
+      },
+      "permissoes" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true
+      },
+      "produtos" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true,
+        "W9N9sJRiLEYz64j5HdxvMlAn8Rp1" : true
+      },
+      "vendas" : {
+        "0ir6jOZyIhTaNaOv6ZAjVqVQGhl2" : true,
+        "JJYenVBH6DNm5LuFTGBoda2V6Ed2" : true,
+        "ebhUeAPvzHfHdjZiv5m14x4EC8I2" : true
+      }
+    }
+  },
+  "produtos" : {
+    "-Lnwa6QQAmIUwTRAlNar" : {
+      "descricao" : "Teste do produto 11",
+      "marca" : "Prod11",
+      "nome" : "Produto 11",
+      "valor" : 11
+    },
+    "produto11" : {
+      "descricao" : "Teste do produto 11",
+      "marca" : "Prod11",
+      "nome" : "Produto 11",
+      "valor" : 11
+    },
+    "produto12" : {
+      "descricao" : "Teste do produto 12",
+      "marca" : "Prod12",
+      "nome" : "Produto 12",
+      "valor" : 12
+    },
+    "produto13" : {
+      "descricao" : "Teste do produto 13",
+      "marca" : "Prod13",
+      "nome" : "Produto 13",
+      "valor" : 13
+    }
+  },
+  "vendas" : {
+    "-LfCknhHqckv8wnSP2FM" : {
+      "cliente" : "cliente05",
+      "desconto" : 0,
+      "produtos" : {
+        "produto03" : true
+      },
+      "total" : 0
+    },
+    "-LfCknqxzu3vtmPYdMPt" : {
+      "cliente" : "cliente05",
+      "desconto" : 0,
+      "produtos" : {
+        "produto03" : true
+      },
+      "total" : 0
+    },
+    "venda01" : {
+      "cliente" : "cliente01",
+      "desconto" : 0,
+      "produtos" : {
+        "produto01" : true,
+        "produto02" : true
+      },
+      "total" : 56.89
+    },
+    "venda02" : {
+      "cliente" : "cliente02",
+      "desconto" : 10,
+      "produtos" : {
+        "produto07" : true
+      },
+      "total" : 899.91
+    },
+    "venda04" : {
+      "cliente" : "cliente07",
+      "desconto" : 5,
+      "produtos" : {
+        "produto06" : true
+      },
+      "total" : 75.52
+    },
+    "venda05" : {
+      "cliente" : "cliente10",
+      "desconto" : 15,
+      "produtos" : {
+        "produto03" : true,
+        "produto04" : true,
+        "produto05" : true
+      },
+      "total" : 153.48
+    }
+  }
+}
