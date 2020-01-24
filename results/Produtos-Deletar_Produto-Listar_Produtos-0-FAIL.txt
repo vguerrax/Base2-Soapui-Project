@@ -1,0 +1,43 @@
+Status: FAIL
+Time Taken: 152
+Size: 1176
+Timestamp: Fri Jan 24 14:08:01 BRST 2020
+TestStep: Listar Produtos
+
+----------------- Messages ------------------------------
+[JsonPath Match] Comparison failed. Path: [$]; Expected value: [{"produto02":{"descricao":"Desinfetante para limpeza perfumada.","marca":"Desinfex","nome":"Desinfetante","valor":5.99},"produto03":{"descricao":"Perfume de excelente odor","marca":"PerfEx","nome":"Perfume","valor":115.99},"produto04":{"descricao":"Camisa polo lisa ou estampada","marca":"Polo","nome":"Camisa","valor":53.99},"produto05":{"descricao":"Escova de dentes grande macia","marca":"Oral-E","nome":"Escova de Dentes","valor":10.59},"produto06":{"descricao":"Cadeira dobravel em aço inox","marca":"Inox Movéis","nome":"Cadeira","valor":79.49},"produto07":{"descricao":"Mesa de vidro seis lugares, luxo!","marca":"Movéis V","nome":"Mesa Seis Lugares","valor":999.9},"produto08":{"descricao":"Balde de plático para limpeza","marca":"Plasutilidades","nome":"Balde","valor":7.99},"produto09":{"descricao":"Rodo médio para limpeza","marca":"Rodim Materias de Limpeza","nome":"Rodo","valor":23.95},"produto10":{"descricao":"Almofada de espuma grande, xadrez","marca":"Estofados Excelcior","nome":"Almofada","valor":15.99}}]; Actual value: [{"produto01":{"descricao":"Radio a pilha para ouvir sua radio favorita em qualquer lugar.","marca":"RadioPort","nome":"Radio a Pilha","valor":50.9},"produto02":{"descricao":"Desinfetante para limpeza perfumada.","marca":"Desinfex","nome":"Desinfetante","valor":5.99},"produto03":{"descricao":"Perfume de excelente odor","marca":"PerfEx","nome":"Perfume","valor":115.99},"produto04":{"descricao":"Camisa polo lisa ou estampada","marca":"Polo","nome":"Camisa","valor":53.99},"produto05":{"descricao":"Escova de dentes grande macia","marca":"Oral-E","nome":"Escova de Dentes","valor":10.59},"produto06":{"descricao":"Cadeira dobravel em aço inox","marca":"Inox Movéis","nome":"Cadeira","valor":79.49},"produto07":{"descricao":"Mesa de vidro seis lugares, luxo!","marca":"Movéis V","nome":"Mesa Seis Lugares","valor":999.9},"produto08":{"descricao":"Balde de plático para limpeza","marca":"Plasutilidades","nome":"Balde","valor":7.99},"produto09":{"descricao":"Rodo médio para limpeza","marca":"Rodim Materias de Limpeza","nome":"Rodo","valor":23.95},"produto10":{"descricao":"Almofada de espuma grande, xadrez","marca":"Estofados Excelcior","nome":"Almofada","valor":15.99}}].
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://base2-soapui.firebaseio.com
+Method: GET
+StatusCode: 200
+URL: https://base2-soapui.firebaseio.com/produtos.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgyMDg3LCJ1c2VyX2lkIjoiVUYyOUFsRnpya2RkTWhKT2pYaWFqMEdaczlIMyIsInN1YiI6IlVGMjlBbEZ6cmtkZE1oSk9qWGlhajBHWnM5SDMiLCJpYXQiOjE1Nzk4ODIwODcsImV4cCI6MTU3OTg4NTY4NywiZW1haWwiOiJlc3RvcXVpc3RhQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJlc3RvcXVpc3RhQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.XrHQy_BnJ4bn-jt69LnBjAULasDQhyu364XnuTBpXa0NV_VOTvZSml71hx9s-Uai4VBYjo7n-dE4-v1FCh3G68NSedgGQM6vHvz93orMfO9QW8BnxiQIaI8UB_fcfSxDsYKZRh85NUuz_4BynSddVxjO5jFslw8c3tETPfPZTZp6hBqE8fEK7a1KB-bqFQZOP2puUpHkQf_JIvQMincIoOwlLvmCvr0FTKQb3EMbODivdg6iLRDVgIK-WzeiPYOp9mW5ZGUHW-OF89zgLqKCkYXUD7g_JJvkmJYN3_3OPF-Fq-I2eNSszwbX9c-pDRwYMUwxMQuS_73Kl5Lll2BOYA
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]
+Host: [base2-soapui.firebaseio.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [0]
+
+GET https://base2-soapui.firebaseio.com/produtos.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgyMDg3LCJ1c2VyX2lkIjoiVUYyOUFsRnpya2RkTWhKT2pYaWFqMEdaczlIMyIsInN1YiI6IlVGMjlBbEZ6cmtkZE1oSk9qWGlhajBHWnM5SDMiLCJpYXQiOjE1Nzk4ODIwODcsImV4cCI6MTU3OTg4NTY4NywiZW1haWwiOiJlc3RvcXVpc3RhQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJlc3RvcXVpc3RhQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.XrHQy_BnJ4bn-jt69LnBjAULasDQhyu364XnuTBpXa0NV_VOTvZSml71hx9s-Uai4VBYjo7n-dE4-v1FCh3G68NSedgGQM6vHvz93orMfO9QW8BnxiQIaI8UB_fcfSxDsYKZRh85NUuz_4BynSddVxjO5jFslw8c3tETPfPZTZp6hBqE8fEK7a1KB-bqFQZOP2puUpHkQf_JIvQMincIoOwlLvmCvr0FTKQb3EMbODivdg6iLRDVgIK-WzeiPYOp9mW5ZGUHW-OF89zgLqKCkYXUD7g_JJvkmJYN3_3OPF-Fq-I2eNSszwbX9c-pDRwYMUwxMQuS_73Kl5Lll2BOYA HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Length: 0
+Host: base2-soapui.firebaseio.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)
+
+
+---------------- Response --------------------------
+Strict-Transport-Security: [max-age=31556926; includeSubDomains; preload]
+Server: [nginx]
+Cache-Control: [no-cache]
+Access-Control-Allow-Origin: [*]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [1176]
+Date: [Fri, 24 Jan 2020 16:08:07 GMT]
+Content-Type: [application/json; charset=utf-8]
+
+{"produto01":{"descricao":"Radio a pilha para ouvir sua radio favorita em qualquer lugar.","marca":"RadioPort","nome":"Radio a Pilha","valor":50.9},"produto02":{"descricao":"Desinfetante para limpeza perfumada.","marca":"Desinfex","nome":"Desinfetante","valor":5.99},"produto03":{"descricao":"Perfume de excelente odor","marca":"PerfEx","nome":"Perfume","valor":115.99},"produto04":{"descricao":"Camisa polo lisa ou estampada","marca":"Polo","nome":"Camisa","valor":53.99},"produto05":{"descricao":"Escova de dentes grande macia","marca":"Oral-E","nome":"Escova de Dentes","valor":10.59},"produto06":{"descricao":"Cadeira dobravel em aço inox","marca":"Inox Movéis","nome":"Cadeira","valor":79.49},"produto07":{"descricao":"Mesa de vidro seis lugares, luxo!","marca":"Movéis V","nome":"Mesa Seis Lugares","valor":999.9},"produto08":{"descricao":"Balde de plático para limpeza","marca":"Plasutilidades","nome":"Balde","valor":7.99},"produto09":{"descricao":"Rodo médio para limpeza","marca":"Rodim Materias de Limpeza","nome":"Rodo","valor":23.95},"produto10":{"descricao":"Almofada de espuma grande, xadrez","marca":"Estofados Excelcior","nome":"Almofada","valor":15.99}}

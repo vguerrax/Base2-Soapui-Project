@@ -1,0 +1,50 @@
+Status: FAIL
+Time Taken: 577
+Size: 36
+Timestamp: Fri Jan 24 14:01:10 BRST 2020
+TestStep: Popular Nó de Vendas
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code: 401 is not in acceptable list of status codes
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://base2-soapui.firebaseio.com
+Encoding: UTF-8
+Method: PUT
+StatusCode: 401
+URL: https://base2-soapui.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgxNjc2LCJ1c2VyX2lkIjoibDQ1VHp6bEREdVk2OTVzQlFmN1JGaXlhaWwzMyIsInN1YiI6Imw0NVR6emxERHVZNjk1c0JRZjdSRml5YWlsMzMiLCJpYXQiOjE1Nzk4ODE2NzYsImV4cCI6MTU3OTg4NTI3NiwiZW1haWwiOiJhZG1pbkB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWRtaW5AdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Qi8GhPaKVqhJjOb55kk40uuOpKZSYXtQ1NTEWsAwe9aP9blgPTpNTUzmujYsD81yEzyxLnIMfcBX0vPCLPD4ZKp0IHsEKhT1Ftb2TOVAhc7T6z3OmW2GqWocZFJ-sISl39RZnr3MyOG2T6Vbb2C0l1naY22PeEG_tRRK_D_iskDPgvzRtyospQM31D5YVe1J7o83nAh1CwuATorlA98H24T9g5btL8d-NUkUEbpjAkqk_ytGQrKJGdHdW34P18vwFoeIopivw_O6Npf8YzO-KI2tvOAfVyXA1rj5LRp9J3t3evtPV_4_-kObizentouo1t-EYZfpJP5S24KJDtRFew
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]
+Host: [base2-soapui.firebaseio.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [649]
+Content-Type: [application/json;charset=UTF-8]
+
+PUT https://base2-soapui.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgxNjc2LCJ1c2VyX2lkIjoibDQ1VHp6bEREdVk2OTVzQlFmN1JGaXlhaWwzMyIsInN1YiI6Imw0NVR6emxERHVZNjk1c0JRZjdSRml5YWlsMzMiLCJpYXQiOjE1Nzk4ODE2NzYsImV4cCI6MTU3OTg4NTI3NiwiZW1haWwiOiJhZG1pbkB0ZXN0ZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWRtaW5AdGVzdGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Qi8GhPaKVqhJjOb55kk40uuOpKZSYXtQ1NTEWsAwe9aP9blgPTpNTUzmujYsD81yEzyxLnIMfcBX0vPCLPD4ZKp0IHsEKhT1Ftb2TOVAhc7T6z3OmW2GqWocZFJ-sISl39RZnr3MyOG2T6Vbb2C0l1naY22PeEG_tRRK_D_iskDPgvzRtyospQM31D5YVe1J7o83nAh1CwuATorlA98H24T9g5btL8d-NUkUEbpjAkqk_ytGQrKJGdHdW34P18vwFoeIopivw_O6Npf8YzO-KI2tvOAfVyXA1rj5LRp9J3t3evtPV_4_-kObizentouo1t-EYZfpJP5S24KJDtRFew HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 649
+Host: base2-soapui.firebaseio.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)
+
+{	"venda01": {		"cliente": "cliente01",		"desconto": 0,		"total": 56.89,		"produtos": {			"produto01": true,			"produto02": true		}	},	"venda02": {		"cliente": "cliente02",		"desconto": 10,		"total": 899.91,		"produtos": {			"produto07": true		}	},	"venda03": {		"cliente": "cliente04",		"desconto": 0,		"total": 39.94,		"produtos": {			"produto09": true,			"produto10": true		}	},	"venda04": {		"cliente": "cliente07",		"desconto": 5,		"total": 75.52,		"produtos": {			"produto06": true		}	},	"venda05": {		"cliente": "cliente10",		"desconto": 15,		"total": 153.48,		"produtos": {			"produto05": true,			"produto03": true,			"produto04": true		}	}}
+
+---------------- Response --------------------------
+Strict-Transport-Security: [max-age=31556926; includeSubDomains; preload]
+Server: [nginx]
+Cache-Control: [no-cache]
+Access-Control-Allow-Origin: [*]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 401 Unauthorized]
+Content-Length: [36]
+Date: [Fri, 24 Jan 2020 16:01:17 GMT]
+Content-Type: [application/json; charset=utf-8]
+
+{
+  "error" : "Permission denied"
+}
+

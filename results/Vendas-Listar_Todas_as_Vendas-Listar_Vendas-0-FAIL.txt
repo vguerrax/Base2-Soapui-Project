@@ -1,0 +1,44 @@
+Status: FAIL
+Time Taken: 179
+Size: 528
+Timestamp: Fri Jan 24 14:10:10 BRST 2020
+TestStep: Listar Vendas
+
+----------------- Messages ------------------------------
+[Script Assertion] assert false
+
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://base2-soapui-dev.firebaseio.com
+Method: GET
+StatusCode: 200
+URL: https://base2-soapui-dev.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpLWRldiIsImF1ZCI6ImJhc2UyLXNvYXB1aS1kZXYiLCJhdXRoX3RpbWUiOjE1Nzk4ODIyMTYsInVzZXJfaWQiOiJKSlllblZCSDZETm01THVGVEdCb2RhMlY2RWQyIiwic3ViIjoiSkpZZW5WQkg2RE5tNUx1RlRHQm9kYTJWNkVkMiIsImlhdCI6MTU3OTg4MjIxNiwiZXhwIjoxNTc5ODg1ODE2LCJlbWFpbCI6InZlbmRlZG9yQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ2ZW5kZWRvckB0ZXN0ZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Pypx-9xGftBvt8no-zBEOyaJaNUW3vT2GKVLVkiEd5A7emdIX2ljvOD7gLj7lCDVJSQRiO7kvnqT4A2qhKQLFfBV6e_TlAmy3PmW1f-BgqiFc9n-wDr2U5AMUyJQ6AkWCUg2DSNWp4RQfKjp25Vx9MYS42jAxKAn2ZG-8h5GnioTlT-HSpSDQ0p3L6zScDDZ19_qybB2FxSr70vZcVWqCNoCGmOdjfHIuxNEth57fXx_Ez7XR3uXFC_8efm-9-00693kliCu1G5kA2ZXB_khe2XcDtVuPy4j5LU2uKSxXmkiSf7U5zjaHG7m3LIGKWl6sYIRaK8XCCWxyKXPyeVAQQ
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]
+Host: [base2-soapui-dev.firebaseio.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [0]
+
+GET https://base2-soapui-dev.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpLWRldiIsImF1ZCI6ImJhc2UyLXNvYXB1aS1kZXYiLCJhdXRoX3RpbWUiOjE1Nzk4ODIyMTYsInVzZXJfaWQiOiJKSlllblZCSDZETm01THVGVEdCb2RhMlY2RWQyIiwic3ViIjoiSkpZZW5WQkg2RE5tNUx1RlRHQm9kYTJWNkVkMiIsImlhdCI6MTU3OTg4MjIxNiwiZXhwIjoxNTc5ODg1ODE2LCJlbWFpbCI6InZlbmRlZG9yQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ2ZW5kZWRvckB0ZXN0ZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Pypx-9xGftBvt8no-zBEOyaJaNUW3vT2GKVLVkiEd5A7emdIX2ljvOD7gLj7lCDVJSQRiO7kvnqT4A2qhKQLFfBV6e_TlAmy3PmW1f-BgqiFc9n-wDr2U5AMUyJQ6AkWCUg2DSNWp4RQfKjp25Vx9MYS42jAxKAn2ZG-8h5GnioTlT-HSpSDQ0p3L6zScDDZ19_qybB2FxSr70vZcVWqCNoCGmOdjfHIuxNEth57fXx_Ez7XR3uXFC_8efm-9-00693kliCu1G5kA2ZXB_khe2XcDtVuPy4j5LU2uKSxXmkiSf7U5zjaHG7m3LIGKWl6sYIRaK8XCCWxyKXPyeVAQQ HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Length: 0
+Host: base2-soapui-dev.firebaseio.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)
+
+
+---------------- Response --------------------------
+Strict-Transport-Security: [max-age=31556926; includeSubDomains; preload]
+Server: [nginx]
+Cache-Control: [no-cache]
+Access-Control-Allow-Origin: [*]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [528]
+Date: [Fri, 24 Jan 2020 16:10:16 GMT]
+Content-Type: [application/json; charset=utf-8]
+
+{"venda01":{"cliente":"cliente01","desconto":0,"produtos":{"produto01":true,"produto02":true},"total":56.89},"venda02":{"cliente":"cliente02","desconto":10,"produtos":{"produto07":true},"total":899.91},"venda03":{"cliente":"cliente04","desconto":0,"produtos":{"produto09":true,"produto10":true},"total":39.94},"venda04":{"cliente":"cliente07","desconto":5,"produtos":{"produto06":true},"total":75.52},"venda05":{"cliente":"cliente10","desconto":15,"produtos":{"produto03":true,"produto04":true,"produto05":true},"total":153.48}}

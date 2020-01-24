@@ -1,0 +1,187 @@
+<html xmlns:stringutils="xalan://com.eviware.soapui.support.StringUtils" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SoapUI Test Results: All TestCases</title>
+<link title="Style" type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+<body onload="open('allclasses-frame.html','classListFrame')">
+<h1>SoapUI Test Results</h1>
+<hr size="1">
+<h2>All TestCases</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time (s)</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Listar Todas as Vendas"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Listar Todas as Vendas">Listar Todas as Vendas</a></td><td>Failure</td><td>The test run was cancelled due to a failed test step.<br>
+<br>
+<code><h3><b>Listar Vendas Failed</b></h3><pre>[Script Assertion] assert false<br/><br/>Status: FAIL<br/>Time Taken: 179<br/>Size: 528<br/>Timestamp: Fri Jan 24 14:10:10 BRST 2020<br/>TestStep: Listar Vendas<br/><br/>----------------- Messages ------------------------------<br/>[Script Assertion] assert false<br/><br/><br/>----------------- Properties ------------------------------<br/>HTTP Version: HTTP/1.1<br/>Endpoint: https://base2-soapui-dev.firebaseio.com<br/>Method: GET<br/>StatusCode: 200<br/>URL: https://base2-soapui-dev.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpLWRldiIsImF1ZCI6ImJhc2UyLXNvYXB1aS1kZXYiLCJhdXRoX3RpbWUiOjE1Nzk4ODIyMTYsInVzZXJfaWQiOiJKSlllblZCSDZETm01THVGVEdCb2RhMlY2RWQyIiwic3ViIjoiSkpZZW5WQkg2RE5tNUx1RlRHQm9kYTJWNkVkMiIsImlhdCI6MTU3OTg4MjIxNiwiZXhwIjoxNTc5ODg1ODE2LCJlbWFpbCI6InZlbmRlZG9yQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ2ZW5kZWRvckB0ZXN0ZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Pypx-9xGftBvt8no-zBEOyaJaNUW3vT2GKVLVkiEd5A7emdIX2ljvOD7gLj7lCDVJSQRiO7kvnqT4A2qhKQLFfBV6e_TlAmy3PmW1f-BgqiFc9n-wDr2U5AMUyJQ6AkWCUg2DSNWp4RQfKjp25Vx9MYS42jAxKAn2ZG-8h5GnioTlT-HSpSDQ0p3L6zScDDZ19_qybB2FxSr70vZcVWqCNoCGmOdjfHIuxNEth57fXx_Ez7XR3uXFC_8efm-9-00693kliCu1G5kA2ZXB_khe2XcDtVuPy4j5LU2uKSxXmkiSf7U5zjaHG7m3LIGKWl6sYIRaK8XCCWxyKXPyeVAQQ<br/><br/>---------------- Request ---------------------------<br/>Connection: [Keep-Alive]<br/>User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]<br/>Host: [base2-soapui-dev.firebaseio.com]<br/>Accept-Encoding: [gzip,deflate]<br/>Content-Length: [0]<br/><br/>GET https://base2-soapui-dev.firebaseio.com/vendas.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpLWRldiIsImF1ZCI6ImJhc2UyLXNvYXB1aS1kZXYiLCJhdXRoX3RpbWUiOjE1Nzk4ODIyMTYsInVzZXJfaWQiOiJKSlllblZCSDZETm01THVGVEdCb2RhMlY2RWQyIiwic3ViIjoiSkpZZW5WQkg2RE5tNUx1RlRHQm9kYTJWNkVkMiIsImlhdCI6MTU3OTg4MjIxNiwiZXhwIjoxNTc5ODg1ODE2LCJlbWFpbCI6InZlbmRlZG9yQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ2ZW5kZWRvckB0ZXN0ZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Pypx-9xGftBvt8no-zBEOyaJaNUW3vT2GKVLVkiEd5A7emdIX2ljvOD7gLj7lCDVJSQRiO7kvnqT4A2qhKQLFfBV6e_TlAmy3PmW1f-BgqiFc9n-wDr2U5AMUyJQ6AkWCUg2DSNWp4RQfKjp25Vx9MYS42jAxKAn2ZG-8h5GnioTlT-HSpSDQ0p3L6zScDDZ19_qybB2FxSr70vZcVWqCNoCGmOdjfHIuxNEth57fXx_Ez7XR3uXFC_8efm-9-00693kliCu1G5kA2ZXB_khe2XcDtVuPy4j5LU2uKSxXmkiSf7U5zjaHG7m3LIGKWl6sYIRaK8XCCWxyKXPyeVAQQ HTTP/1.1<br/>Accept-Encoding: gzip,deflate<br/>Content-Length: 0<br/>Host: base2-soapui-dev.firebaseio.com<br/>Connection: Keep-Alive<br/>User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)<br/><br/><br/>---------------- Response --------------------------<br/>Strict-Transport-Security: [max-age=31556926; includeSubDomains; preload]<br/>Server: [nginx]<br/>Cache-Control: [no-cache]<br/>Access-Control-Allow-Origin: [*]<br/>Connection: [keep-alive]<br/>#status#: [HTTP/1.1 200 OK]<br/>Content-Length: [528]<br/>Date: [Fri, 24 Jan 2020 16:10:16 GMT]<br/>Content-Type: [application/json; charset=utf-8]<br/><br/>{&quot;venda01&quot;:{&quot;cliente&quot;:&quot;cliente01&quot;,&quot;desconto&quot;:0,&quot;produtos&quot;:{&quot;produto01&quot;:true,&quot;produto02&quot;:true},&quot;total&quot;:56.89},&quot;venda02&quot;:{&quot;cliente&quot;:&quot;cliente02&quot;,&quot;desconto&quot;:10,&quot;produtos&quot;:{&quot;produto07&quot;:true},&quot;total&quot;:899.91},&quot;venda03&quot;:{&quot;cliente&quot;:&quot;cliente04&quot;,&quot;desconto&quot;:0,&quot;produtos&quot;:{&quot;produto09&quot;:true,&quot;produto10&quot;:true},&quot;total&quot;:39.94},&quot;venda04&quot;:{&quot;cliente&quot;:&quot;cliente07&quot;,&quot;desconto&quot;:5,&quot;produtos&quot;:{&quot;produto06&quot;:true},&quot;total&quot;:75.52},&quot;venda05&quot;:{&quot;cliente&quot;:&quot;cliente10&quot;,&quot;desconto&quot;:15,&quot;produtos&quot;:{&quot;produto03&quot;:true,&quot;produto04&quot;:true,&quot;produto05&quot;:true},&quot;total&quot;:153.48}}<br/></pre><hr/></code></td><td>0.676</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Filtrar Vendas - orderBy"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Filtrar Vendas - orderBy">Filtrar Vendas - orderBy</a></td><td>Success</td><td></td><td>0.475</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Filtrar Vendas - startAt e endAt"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Filtrar Vendas - startAt e endAt">Filtrar Vendas - startAt e endAt</a></td><td>Success</td><td></td><td>1.438</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Filtrar Vendas - equalTo"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Filtrar Vendas - equalTo">Filtrar Vendas - equalTo</a></td><td>Success</td><td></td><td>1.721</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Filtrar Vendas - limitToFirst"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Filtrar Vendas - limitToFirst">Filtrar Vendas - limitToFirst</a></td><td>Success</td><td></td><td>0.525</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Filtrar Vendas - limitToLast"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Filtrar Vendas - limitToLast">Filtrar Vendas - limitToLast</a></td><td>Success</td><td></td><td>0.523</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Consultar Venda"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Consultar Venda">Consultar Venda</a></td><td>Success</td><td></td><td>0.418</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Deletar Venda"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Deletar Venda">Deletar Venda</a></td><td>Success</td><td></td><td>0.777</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Incluir Lista de Vendas - Acrescentar a Atual"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Incluir Lista de Vendas - Acrescentar a Atual">Incluir Lista de Vendas - Acrescentar a Atual</a></td><td>Success</td><td></td><td>0.632</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Incluir Lista de Vendas - Substituir a Atual"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Incluir Lista de Vendas - Substituir a Atual">Incluir Lista de Vendas - Substituir a Atual</a></td><td>Success</td><td></td><td>0.660</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Incluir Venda"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Incluir Venda">Incluir Venda</a></td><td>Success</td><td></td><td>3.211</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Incluir Venda - Valida%C3%A7%C3%A3o de Regras"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Incluir Venda - Valida%C3%A7%C3%A3o de Regras">Incluir Venda - Valida&ccedil;&atilde;o de Regras</a></td><td>Success</td><td></td><td>4.790</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Leitura"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Valida%C3%A7%C3%B5es de acesso - Leitura">Valida&ccedil;&otilde;es de acesso - Leitura</a></td><td>Success</td><td></td><td>1.983</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html">Base2 SoapUi.Vendas</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o"></a><a href="Base2 SoapUi/1_Base2 SoapUi.Vendas.html#Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o">Valida&ccedil;&otilde;es de acesso - Grava&ccedil;&atilde;o</a></td><td>Success</td><td></td><td>2.075</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Listar Todos Fornecedores"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Listar Todos Fornecedores">Listar Todos Fornecedores</a></td><td>Success</td><td></td><td>0.477</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Filtrar Fornecedores - orderBy"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Filtrar Fornecedores - orderBy">Filtrar Fornecedores - orderBy</a></td><td>Success</td><td></td><td>0.439</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Filtrar Fornecedores - startAt e endAt"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Filtrar Fornecedores - startAt e endAt">Filtrar Fornecedores - startAt e endAt</a></td><td>Success</td><td></td><td>3.966</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Filtrar Fornecedores - equalTo"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Filtrar Fornecedores - equalTo">Filtrar Fornecedores - equalTo</a></td><td>Success</td><td></td><td>2.648</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Filtrar Fornecedores - limitToFirst"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Filtrar Fornecedores - limitToFirst">Filtrar Fornecedores - limitToFirst</a></td><td>Success</td><td></td><td>0.453</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Filtrar Fornecedores - limitToLast"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Filtrar Fornecedores - limitToLast">Filtrar Fornecedores - limitToLast</a></td><td>Success</td><td></td><td>0.520</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Consultar Fornecedor"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Consultar Fornecedor">Consultar Fornecedor</a></td><td>Success</td><td></td><td>0.577</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Deletar Fornecedor"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Deletar Fornecedor">Deletar Fornecedor</a></td><td>Success</td><td></td><td>0.593</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Incluir Lista de Fornecedores - Acrescentar a Atual"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Incluir Lista de Fornecedores - Acrescentar a Atual">Incluir Lista de Fornecedores - Acrescentar a Atual</a></td><td>Success</td><td></td><td>0.821</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Incluir Lista de Fornecedores - Substituir Atual"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Incluir Lista de Fornecedores - Substituir Atual">Incluir Lista de Fornecedores - Substituir Atual</a></td><td>Success</td><td></td><td>0.692</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Incluir Fornecedor"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Incluir Fornecedor">Incluir Fornecedor</a></td><td>Success</td><td></td><td>0.789</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Incluir Fornecedor - Valida%C3%A7%C3%B5es Regras"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Incluir Fornecedor - Valida%C3%A7%C3%B5es Regras">Incluir Fornecedor - Valida&ccedil;&otilde;es Regras</a></td><td>Success</td><td></td><td>11.748</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Leitura"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Valida%C3%A7%C3%B5es de acesso - Leitura">Valida&ccedil;&otilde;es de acesso - Leitura</a></td><td>Success</td><td></td><td>1.981</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html">Base2 SoapUi.Fornecedores</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o"></a><a href="Base2 SoapUi/2_Base2 SoapUi.Fornecedores.html#Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o">Valida&ccedil;&otilde;es de acesso - Grava&ccedil;&atilde;o</a></td><td>Success</td><td></td><td>2.167</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Listar Todos Clientes"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Listar Todos Clientes">Listar Todos Clientes</a></td><td>Success</td><td></td><td>0.477</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Filtrar Clientes - orderBy"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Filtrar Clientes - orderBy">Filtrar Clientes - orderBy</a></td><td>Success</td><td></td><td>0.476</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Filtrar Clientes - startAt e endAt"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Filtrar Clientes - startAt e endAt">Filtrar Clientes - startAt e endAt</a></td><td>Success</td><td></td><td>2.399</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Filtrar Clientes - equalTo"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Filtrar Clientes - equalTo">Filtrar Clientes - equalTo</a></td><td>Success</td><td></td><td>1.081</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Filtrar Clientes - limitToFirst"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Filtrar Clientes - limitToFirst">Filtrar Clientes - limitToFirst</a></td><td>Success</td><td></td><td>0.528</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Filtrar Clientes - limitToLast"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Filtrar Clientes - limitToLast">Filtrar Clientes - limitToLast</a></td><td>Success</td><td></td><td>0.447</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Consultar Cliente"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Consultar Cliente">Consultar Cliente</a></td><td>Success</td><td></td><td>0.556</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Deletar Cliente"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Deletar Cliente">Deletar Cliente</a></td><td>Success</td><td></td><td>0.632</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Incluir Lista de Clientes - Acrescentar %C3%A0 Atual"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Incluir Lista de Clientes - Acrescentar %C3%A0 Atual">Incluir Lista de Clientes - Acrescentar &agrave; Atual</a></td><td>Success</td><td></td><td>0.564</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Incluir Lista de Clientes - Substituir Atual"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Incluir Lista de Clientes - Substituir Atual">Incluir Lista de Clientes - Substituir Atual</a></td><td>Success</td><td></td><td>0.753</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Incluir Cliente"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Incluir Cliente">Incluir Cliente</a></td><td>Success</td><td></td><td>0.662</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Incluir Cliente - Valida%C3%A7%C3%B5es Regras"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Incluir Cliente - Valida%C3%A7%C3%B5es Regras">Incluir Cliente - Valida&ccedil;&otilde;es Regras</a></td><td>Success</td><td></td><td>2.778</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Leitura"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Valida%C3%A7%C3%B5es de acesso - Leitura">Valida&ccedil;&otilde;es de acesso - Leitura</a></td><td>Success</td><td></td><td>4.485</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html">Base2 SoapUi.Clientes</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o"></a><a href="Base2 SoapUi/3_Base2 SoapUi.Clientes.html#Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o">Valida&ccedil;&otilde;es de acesso - Grava&ccedil;&atilde;o</a></td><td>Success</td><td></td><td>2.107</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Listar Todos Produtos"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Listar Todos Produtos">Listar Todos Produtos</a></td><td>Success</td><td></td><td>0.655</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Filtrar Produtos - orderBy"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Filtrar Produtos - orderBy">Filtrar Produtos - orderBy</a></td><td>Success</td><td></td><td>0.540</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Filtrar Produtos - startAt e endAt"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Filtrar Produtos - startAt e endAt">Filtrar Produtos - startAt e endAt</a></td><td>Success</td><td></td><td>3.381</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Filtrar Produtos - equalTo"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Filtrar Produtos - equalTo">Filtrar Produtos - equalTo</a></td><td>Success</td><td></td><td>2.597</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Filtrar Produtos - limitToFirst"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Filtrar Produtos - limitToFirst">Filtrar Produtos - limitToFirst</a></td><td>Success</td><td></td><td>0.672</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Filtrar Produtos - limitToLast"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Filtrar Produtos - limitToLast">Filtrar Produtos - limitToLast</a></td><td>Success</td><td></td><td>0.646</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Consultar Produto"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Consultar Produto">Consultar Produto</a></td><td>Success</td><td></td><td>0.474</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Deletar Produto"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Deletar Produto">Deletar Produto</a></td><td>Success</td><td></td><td>0.676</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Incluir Lista de Produtos - Acrescentar a Atual"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Incluir Lista de Produtos - Acrescentar a Atual">Incluir Lista de Produtos - Acrescentar a Atual</a></td><td>Success</td><td></td><td>1.617</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Incluir Lista de Produtos - Substituir Atual"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Incluir Lista de Produtos - Substituir Atual">Incluir Lista de Produtos - Substituir Atual</a></td><td>Success</td><td></td><td>0.661</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Incluir Produto"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Incluir Produto">Incluir Produto</a></td><td>Success</td><td></td><td>2.886</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Incluir Produto - Valida%C3%A7%C3%B5es Regras"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Incluir Produto - Valida%C3%A7%C3%B5es Regras">Incluir Produto - Valida&ccedil;&otilde;es Regras</a></td><td>Success</td><td></td><td>5.829</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Leitura"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Valida%C3%A7%C3%B5es de acesso - Leitura">Valida&ccedil;&otilde;es de acesso - Leitura</a></td><td>Success</td><td></td><td>2.118</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html">Base2 SoapUi.Produtos</a></td><td><a name="Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o"></a><a href="Base2 SoapUi/4_Base2 SoapUi.Produtos.html#Valida%C3%A7%C3%B5es de acesso - Grava%C3%A7%C3%A3o">Valida&ccedil;&otilde;es de acesso - Grava&ccedil;&atilde;o</a></td><td>Success</td><td></td><td>2.079</td>
+</tr>
+</table>
+</body>
+</html>

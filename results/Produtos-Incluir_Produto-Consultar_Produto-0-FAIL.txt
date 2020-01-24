@@ -1,0 +1,43 @@
+Status: FAIL
+Time Taken: 158
+Size: 4
+Timestamp: Fri Jan 24 14:01:14 BRST 2020
+TestStep: Consultar Produto
+
+----------------- Messages ------------------------------
+[JsonPath Match] Comparison failed. Path: [$]; Expected value: [{"descricao":"Teste do produto 11","marca":"Prod11","nome":"Produto 11","valor":11}]; Actual value: [null].
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://base2-soapui.firebaseio.com
+Method: GET
+StatusCode: 200
+URL: https://base2-soapui.firebaseio.com/produtos/-LzNHJy9-E1zYgpyBBnH.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgxNjgwLCJ1c2VyX2lkIjoiVUYyOUFsRnpya2RkTWhKT2pYaWFqMEdaczlIMyIsInN1YiI6IlVGMjlBbEZ6cmtkZE1oSk9qWGlhajBHWnM5SDMiLCJpYXQiOjE1Nzk4ODE2ODAsImV4cCI6MTU3OTg4NTI4MCwiZW1haWwiOiJlc3RvcXVpc3RhQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJlc3RvcXVpc3RhQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.XPTFtKZAyTN37csUcJPPMNriVty9yKa_UW0fhlif28oEsyM_93BVQIMk0krbVW9K0ZoUuR5rZgdBkmCF6Xj5ZGKJwWrNYrAC0EbFUuvMnnlopd7CD0_CUKDcFS84MAOjiOeE1jhXJoyxjJEtSkcac4Gx5Bg_xb-Xuag84IgEaRGSOci3JpKf26_BFhngRsH_Zf1vI_h38pPNFQgFrEHb1rHfPko5SKZCmdnP9MkjJfPOx4_rsKZfl4HJ4BcY0u5veYokpiVFsstvP4DrlDdDfQ3iD_at9JbSnBvXgrYpd8MEWAm7PjhKPIPyuq2PjDgAG25ob15M_ajtZZeLVjaqQw
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]
+Host: [base2-soapui.firebaseio.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [0]
+
+GET https://base2-soapui.firebaseio.com/produtos/-LzNHJy9-E1zYgpyBBnH.json?auth=eyJhbGciOiJSUzI1NiIsImtpZCI6ImU1YTkxZDlmMzlmYTRkZTI1NGExZTg5ZGYwMGYwNWI3ZTI0OGI5ODUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFzZTItc29hcHVpIiwiYXVkIjoiYmFzZTItc29hcHVpIiwiYXV0aF90aW1lIjoxNTc5ODgxNjgwLCJ1c2VyX2lkIjoiVUYyOUFsRnpya2RkTWhKT2pYaWFqMEdaczlIMyIsInN1YiI6IlVGMjlBbEZ6cmtkZE1oSk9qWGlhajBHWnM5SDMiLCJpYXQiOjE1Nzk4ODE2ODAsImV4cCI6MTU3OTg4NTI4MCwiZW1haWwiOiJlc3RvcXVpc3RhQHRlc3RlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJlc3RvcXVpc3RhQHRlc3RlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.XPTFtKZAyTN37csUcJPPMNriVty9yKa_UW0fhlif28oEsyM_93BVQIMk0krbVW9K0ZoUuR5rZgdBkmCF6Xj5ZGKJwWrNYrAC0EbFUuvMnnlopd7CD0_CUKDcFS84MAOjiOeE1jhXJoyxjJEtSkcac4Gx5Bg_xb-Xuag84IgEaRGSOci3JpKf26_BFhngRsH_Zf1vI_h38pPNFQgFrEHb1rHfPko5SKZCmdnP9MkjJfPOx4_rsKZfl4HJ4BcY0u5veYokpiVFsstvP4DrlDdDfQ3iD_at9JbSnBvXgrYpd8MEWAm7PjhKPIPyuq2PjDgAG25ob15M_ajtZZeLVjaqQw HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Length: 0
+Host: base2-soapui.firebaseio.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)
+
+
+---------------- Response --------------------------
+Strict-Transport-Security: [max-age=31556926; includeSubDomains; preload]
+Server: [nginx]
+Cache-Control: [no-cache]
+Access-Control-Allow-Origin: [*]
+Connection: [keep-alive]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [4]
+Date: [Fri, 24 Jan 2020 16:01:20 GMT]
+Content-Type: [application/json; charset=utf-8]
+
+null
