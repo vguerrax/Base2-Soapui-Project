@@ -45,14 +45,17 @@ _https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=A
 Body:
 
 _{<br/>
+```
 email : "teste@teste.com",<br/>
 password : "teste123",<br/>
 returnSecureToken : true<br/>
+```
 }_
 
 O retorno dessa requisição será parecido com o JSON a seguir, onde _idToken_ é o token de acesso:
 
 _{<br/>
+```
 "kind": "identitytoolkit#VerifyPasswordResponse",<br/>
 "localId": "YMprHGAwOHedspjGgqiJ93vqt4s1",<br/>
 "email": "vendedor@teste.com",<br/>
@@ -61,7 +64,8 @@ _{<br/>
 "registered": true,<br/>
 "refreshToken": "AGK09ANVn187e9lrzKzYgIS_qiimm1XxmCKVq1Z-4ScaJZv4WLRM5F1jGFdPqa7EoxtkLh8IBuB_3cggX2nymaEwnQZSzsjbVZrgGXbc-o2LIBzGOPqwEMINaaR-v4rZ443nkHTVQiVoxL-0BHIRAVPM40TdUA19jQerlnLhDicz0abNelqt2IAhtunkAMObJsXcI-bOi8R0cOPRJLJFu1BZedZRO2pjoA",<br/>
 "expiresIn": "3600"<br/>
-}_
+}
+```_
 
 ### Parâmetros de Query
 A API do Realtime Database aceita diversos parâmetros para filtrar e ordenar os dados retornados. Segue a lista dos parâmetros e como utiliza-los:
