@@ -128,21 +128,32 @@ A seguir serão apresentados os testes e as regras de negócio validadas por est
 ### Clientes
 As regras do nó clientes estão definidas da seguinte forma no Firebase:
 
-* **Leitura**: Somente usuários autenticados cujo id esteja definido com valor true no caminho permissoes > leitura > clientes.<br/>Definição da regra no Firebase:<br/>_".read": "root.child('permissoes').child('leitura').child('clientes').child(auth.uid).val() == true"_
+* **Leitura**: Somente usuários autenticados cujo id esteja definido com valor true no caminho permissoes > leitura > clientes.<br/>Definição da regra no Firebase:
+```
+".read": "root.child('permissoes').child('leitura').child('clientes').child(auth.uid).val() == true"
+```
 
-* **Escrita**: Somente usuários autenticados cujo id esteja definido com valor true no caminho permissoes > gravacao> clientes.<br/>Definição da regra no Firebase:<br/>_".write": "root.child('permissoes').child('gravacao').child('clientes').child(auth.uid).val() == true"_
+* **Escrita**: Somente usuários autenticados cujo id esteja definido com valor true no caminho permissoes > gravacao> clientes.<br/>Definição da regra no Firebase:
+```
+".write": "root.child('permissoes').child('gravacao').child('clientes').child(auth.uid).val() == true"
+```
 
-* **Index**: Os campos indexados são nome, nascimento e sexo.<br/>Definição da regra no Firebase:<br/>_".indexOn" : ["nome", "nascimento", "sexo"]_
+* **Index**: Os campos indexados são nome, nascimento e sexo.<br/>Definição da regra no Firebase:
+```
+".indexOn" : ["nome", "nascimento", "sexo"]
+```
 
-* **Validação**: Somente registros que contenham os campos nome, nascimento e sexo podem ser inseridos. O nome deve ter no máximo 100 caracteres e deve ser do tipo string. O nascimento deve ser uma data no formato ‘yyyy-mm-dd’ (Ex.: 1992-06-14). O sexo deve ser do tipo string e deve conter um dos seguintes valores: ‘F’ ou ‘M’.<br/>Definição da regra no Firebase:<br/>
-	_".validate" :<br/>
-	"newData.hasChildren(['nome', 'nascimento', 'sexo']) &&<br/>
-	newData.child('nome').val().length <= 100 &&<br/>
-	newData.child('nome').isString() &&<br/>
-	newData.child('nascimento').val()<br/>
-	.matches(/^[1-9][0-9][0-9][0-9][-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$/) &&<br/>
-	newData.child('sexo').isString() &&<br/>
-	newData.child('sexo').val().matches(/^(M|F)$/)"_<br/>
+* **Validação**: Somente registros que contenham os campos nome, nascimento e sexo podem ser inseridos. O nome deve ter no máximo 100 caracteres e deve ser do tipo string. O nascimento deve ser uma data no formato ‘yyyy-mm-dd’ (Ex.: 1992-06-14). O sexo deve ser do tipo string e deve conter um dos seguintes valores: ‘F’ ou ‘M’.<br/>Definição da regra no Firebase:
+```
+	_".validate" :
+	"newData.hasChildren(['nome', 'nascimento', 'sexo']) &&
+	newData.child('nome').val().length <= 100 &&
+	newData.child('nome').isString() &&
+	newData.child('nascimento').val()
+	.matches(/^[1-9][0-9][0-9][0-9][-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])$/) &&
+	newData.child('sexo').isString() &&
+	newData.child('sexo').val().matches(/^(M|F)$/)"
+```
 
 Os casos de teste do nó cliente são os seguintes:
 * **Popular Clientes**: Caso de teste que realiza inclusão de clientes na base para execução dos demais testes. Realiza uma chamada POST à requisição GoogleAPIs para obter o token de autenticação e em seguida realiza uma chamada PUT à requisição FirebaseEndPoints, nó clientes, passando o conteúdo do arquivo clientes.json. Está desabilitado e é chamado via script Groovy em cada caso de teste onde um cliente existente é necessário.
