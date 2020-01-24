@@ -145,7 +145,7 @@ As regras do nó clientes estão definidas da seguinte forma no Firebase:
 
 * **Validação**: Somente registros que contenham os campos nome, nascimento e sexo podem ser inseridos. O nome deve ter no máximo 100 caracteres e deve ser do tipo string. O nascimento deve ser uma data no formato ‘yyyy-mm-dd’ (Ex.: 1992-06-14). O sexo deve ser do tipo string e deve conter um dos seguintes valores: ‘F’ ou ‘M’.<br/>Definição da regra no Firebase:
 ```
-	_".validate" :
+	".validate" :
 	"newData.hasChildren(['nome', 'nascimento', 'sexo']) &&
 	newData.child('nome').val().length <= 100 &&
 	newData.child('nome').isString() &&
